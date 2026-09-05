@@ -59,6 +59,10 @@ Use the state guide for the place you are actually visiting, then confirm the cu
 | Wisconsin | [Rockhounding in Wisconsin](https://usarockhounding.com/rockhounding-map/wisconsin/) |
 | Wyoming | [Rockhounding in Wyoming](https://usarockhounding.com/rockhounding-map/wyoming/) |
 
+### Tennessee research note
+
+For a focused example of how a broad geological occurrence should be separated from a verified collecting destination, read the repository's [West Tennessee Loess and Gravel Research Guide](west-tennessee-loess-and-gravel-research.md).
+
 ## How to use a state guide
 
 A useful state guide should help you move through four questions in order:
