@@ -195,3 +195,20 @@ This repository and USA Rockhounding are research and discovery resources. They 
 **USA Rockhounding:** https://usarockhounding.com/
 
 **Interactive map:** https://usarockhounding.com/rockhounding-map/
+
+## Current live USA Rockhounding sections
+
+- [USA Rockhounding home](https://usarockhounding.com/)
+- [50-state interactive rockhounding map](https://usarockhounding.com/rockhounding-map/)
+- [Rockhounding by State — all 50 state guides](https://usarockhounding.com/rockhounding-map/by-state/)
+- [Rockhounding Near Me](https://usarockhounding.com/rockhounding-map/near-me/)
+- [Compare Rockhounding Across All 50 States](https://usarockhounding.com/rockhounding-map/compare-states/)
+- [Public-Land Rockhounding Research Guide](https://usarockhounding.com/rockhounding-map/public-land-rockhounding/)
+- [Rockhounding Rules, Access & Permission Guide](https://usarockhounding.com/rockhounding-map/rules-access/)
+- [Managed Rockhounding & Collecting Sites](https://usarockhounding.com/rockhounding-map/managed-collecting-sites/)
+- [Fee-Dig, Gem Mining & Panning Sites](https://usarockhounding.com/rockhounding-map/fee-dig-sites/)
+- [Beginner Rockhounding Guide](https://usarockhounding.com/rockhounding-map/beginner-rockhounding/)
+- [Rocks, Minerals & Fossils Explorer](https://usarockhounding.com/rockhounding-map/rocks-minerals-fossils/)
+- [Fossil Hunting in the United States](https://usarockhounding.com/rockhounding-map/rocks-minerals-fossils/fossils/)
+- [Gold Panning & Prospecting in the United States](https://usarockhounding.com/rockhounding-map/rocks-minerals-fossils/gold/)
+- [Quartz Rockhounding in the United States](https://usarockhounding.com/rockhounding-map/rocks-minerals-fossils/quartz/)
