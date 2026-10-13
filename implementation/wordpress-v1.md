@@ -332,3 +332,31 @@ Editorial enrichment should prioritize:
 6. stale/high-risk records requiring clarification
 
 Use the repository's `guides/location-guide-template.md` for each enriched guide.
+
+
+## 17. Existing live USA Rockhounding integration point
+
+The current live site already provides the correct migration anchor:
+
+- plugin: `rockhounding-map-explorer`
+- main registry: `rockhounding-map-v1/data/map_location_registry.json`
+- enrichment index: `rockhounding-map-v1/data/location_content_index.json`
+- current map renderer: Leaflet
+- current clustering: Leaflet MarkerCluster
+
+Therefore v1 should be an in-place evolution of the current explorer, not a parallel map product.
+
+### Migration sequence
+
+1. Read every existing registry row.
+2. Preserve every current row and generate a permanent `record_id`.
+3. Resolve/generate a permanent guide slug.
+4. Normalize status, coordinate policy, evidence and verification fields.
+5. Mark incomplete legacy rows `research`; do not drop them.
+6. Add record ID and guide URL to the map payload.
+7. Update the existing marker popup to link to the permanent guide.
+8. Add the story/testimony system to the guide route.
+9. Generate editorial review queues for weak/stale/duplicate records.
+10. Upgrade important dynamic guides into full editorial guides without changing their URLs.
+
+This keeps all existing map coverage while progressively increasing record quality.
