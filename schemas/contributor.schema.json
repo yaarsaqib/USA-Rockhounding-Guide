@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://usarockhounding.com/schema/contributor.schema.json",
+  "title": "USA Rockhounding Public Contributor Profile",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "contributor_id",
+    "created_at",
+    "points",
+    "badge",
+    "approved_story_count",
+    "approved_photo_count"
+  ],
+  "properties": {
+    "schema_version": { "type": "string", "const": "1.0" },
+    "contributor_id": { "type": "string", "pattern": "^RC-[A-Z0-9]{8,16}$" },
+    "display_name": { "type": ["string", "null"], "maxLength": 80 },
+    "created_at": { "type": "string", "format": "date-time" },
+    "points": { "type": "integer", "minimum": 0 },
+    "badge": {
+      "type": "string",
+      "enum": [
+        "new_explorer",
+        "field_reporter",
+        "trail_contributor",
+        "trusted_rockhound",
+        "atlas_scout",
+        "atlas_steward",
+        "legendary_contributor"
+      ]
+    },
+    "approved_story_count": { "type": "integer", "minimum": 0 },
+    "approved_photo_count": { "type": "integer", "minimum": 0 },
+    "helpful_votes": { "type": "integer", "minimum": 0 },
+    "editor_reliability": {
+      "type": "string",
+      "enum": ["unrated", "developing", "reliable", "highly_reliable"]
+    },
+    "last_approved_contribution_at": {
+      "type": ["string", "null"],
+      "format": "date-time"
+    }
+  },
+  "additionalProperties": false,
+  "description": "Public profile only. Recovery secrets, IP addresses, emails, anti-abuse metadata and authentication material must never be exported here."
+}
