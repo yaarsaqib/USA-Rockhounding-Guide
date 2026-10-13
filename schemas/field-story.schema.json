@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://usarockhounding.com/schema/field-story.schema.json",
+  "title": "USA Rockhounding Field Story",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "story_id",
+    "record_id",
+    "contributor_id",
+    "moderation_status",
+    "submitted_at",
+    "visit_date",
+    "title",
+    "story",
+    "consent"
+  ],
+  "properties": {
+    "schema_version": { "type": "string", "const": "1.0" },
+    "story_id": { "type": "string", "pattern": "^ST-[A-Z0-9]{8,16}$" },
+    "record_id": { "type": "string", "pattern": "^RH-[A-Z0-9]{8,16}$" },
+    "contributor_id": { "type": "string", "pattern": "^RC-[A-Z0-9]{8,16}$" },
+    "moderation_status": {
+      "type": "string",
+      "enum": ["pending", "approved", "needs_review", "rejected"]
+    },
+    "submitted_at": { "type": "string", "format": "date-time" },
+    "visit_date": { "type": "string", "format": "date" },
+    "title": { "type": "string", "minLength": 3, "maxLength": 140 },
+    "story": { "type": "string", "minLength": 30, "maxLength": 12000 },
+    "finds": {
+      "type": "array",
+      "items": { "type": "string", "maxLength": 120 }
+    },
+    "access_conditions": { "type": ["string", "null"], "maxLength": 2500 },
+    "condition_flags": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": [
+          "road_closed",
+          "access_blocked",
+          "fee_changed",
+          "permit_required",
+          "no_collecting_sign",
+          "coordinate_inaccurate",
+          "manager_changed",
+          "seasonal_closure",
+          "hazard_changed",
+          "other"
+        ]
+      }
+    },
+    "photos": {
+      "type": "array",
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "required": ["photo_id", "alt_text", "rights_attested"],
+        "properties": {
+          "photo_id": { "type": "string" },
+          "alt_text": { "type": "string", "maxLength": 240 },
+          "caption": { "type": ["string", "null"], "maxLength": 500 },
+          "rights_attested": { "type": "boolean", "const": true }
+        },
+        "additionalProperties": false
+      }
+    },
+    "consent": {
+      "type": "object",
+      "required": ["publish_story", "publish_photos", "terms_version"],
+      "properties": {
+        "publish_story": { "type": "boolean", "const": true },
+        "publish_photos": { "type": "boolean" },
+        "terms_version": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "moderation": {
+      "type": "object",
+      "properties": {
+        "reviewed_at": { "type": ["string", "null"], "format": "date-time" },
+        "reviewer": { "type": ["string", "null"] },
+        "public_note": { "type": ["string", "null"] }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

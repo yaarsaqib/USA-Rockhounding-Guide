@@ -234,3 +234,30 @@ Promotion to Conditional or Ready requires stronger evidence about:
 - coordinate safety
 
 The objective is not simply to claim the largest number of pins. It is to create the largest useful, transparent and field-ready geographical intelligence system.
+
+
+## Build-ready v1 contracts
+
+The architecture now has concrete repository contracts:
+
+- [Location record JSON Schema](../schemas/location-record.schema.json)
+- [Field story JSON Schema](../schemas/field-story.schema.json)
+- [Public contributor profile JSON Schema](../schemas/contributor.schema.json)
+- [All-record migration rules](../data/README.md)
+- [Location guide quality template](location-guide-template.md)
+- [WordPress implementation contract](../implementation/wordpress-v1.md)
+
+### Required behavior for every current record
+
+Every current map record must be migrated, assigned a permanent ID and given a stable guide route. Records with incomplete evidence remain available as Research records instead of disappearing.
+
+### Additional open-source scale ideas
+
+Beyond Leaflet/MapLibre/PostGIS/QGIS/GRASS, useful components for later phases include:
+
+- **Supercluster** — fast client/server-side point clustering for very dense marker inventories.
+- **PMTiles** — single-file tiled archives that can serve vector layers from static/object storage without maintaining a custom tile server.
+- **H3** — hierarchical hexagonal spatial indexing for coverage grids, nearby-cell precomputation, aggregate density and review prioritization.
+- **GeoParquet** — portable columnar geospatial snapshots for large analytical/editorial datasets.
+
+These are scaling tools, not substitutes for evidence quality. The authoritative product advantage remains the separation of geology, coordinates, ownership/access, collecting rules, freshness and community observations.
