@@ -1,0 +1,20 @@
+/* Scientific context is visually distinct from access/trust status. */
+#rh-app .rh-layerbar [data-rha-geology]{border:1px solid #6e8190;background:#eaf3f3;color:#173a43;font-weight:700}
+#rh-app .rh-layerbar [data-rha-geology].is-active{background:#166b79;color:white;border-color:#166b79}
+#rh-app .rha-geology-panel{position:absolute;z-index:960;bottom:20px;left:14px;width:min(330px,calc(100% - 28px));max-height:min(62%,430px);overflow:auto;padding:14px;border:1px solid #b8d0cd;border-radius:14px;background:rgba(250,254,252,.98);box-shadow:0 8px 28px rgba(13,47,45,.24);font:14px/1.4 system-ui,sans-serif;color:#163630}
+#rh-app .rha-geology-panel[hidden],#rh-app .rha-geo-result[hidden]{display:none!important}
+#rh-app .rha-geo-head{display:flex;align-items:center;justify-content:space-between;gap:8px}
+#rh-app .rha-geo-head strong{font-size:15px}
+#rh-app .rha-geo-head button{font-size:20px;line-height:1;padding:2px 6px;background:transparent;border:0;color:#163630;cursor:pointer}
+#rh-app .rha-geo-disclaimer{font-size:12px;margin:8px 0;color:#3e514f}
+#rh-app .rha-geo-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+#rh-app .rha-geo-actions button{border:1px solid #126676;background:#fff;color:#125363;border-radius:7px;padding:7px 9px;cursor:pointer;font-weight:700}
+#rh-app .rha-geo-actions button[aria-pressed=true]{background:#166b79;color:#fff}
+#rh-app .rha-geo-actions label{font-size:12px;font-weight:700;display:flex;gap:6px;align-items:center;color:#234944}
+#rh-app .rha-geo-actions input{width:84px;accent-color:#126676}
+#rh-app .rha-geo-status{margin:9px 0 6px;padding:8px;border-radius:7px;background:#e7f2ef;color:#234944;font-size:12px}
+#rh-app .rha-geo-unit{padding:8px 0;border-bottom:1px solid #c8d7d4;font-size:12px;overflow-wrap:anywhere}
+#rh-app .rha-geo-line{margin:3px 0}
+#rh-app .rha-geo-credit{margin-top:8px;font-size:11px;color:#405e58}
+#rh-app .rha-geology-inspecting{cursor:crosshair!important}
+@media(max-width:680px){#rh-app .rha-geology-panel{bottom:10px;left:8px;width:calc(100% - 16px);max-height:40%;padding:10px;font-size:13px}}
