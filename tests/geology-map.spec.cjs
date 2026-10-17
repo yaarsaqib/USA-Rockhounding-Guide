@@ -68,3 +68,35 @@ test('point geological data preserves primary research fields',async ({request})
   expect(data.units[0]?.source_id).toBeTruthy();
   expect(data.note).toContain('permission');
 });
+
+
+test('guide filters actual inspected units and reveals original source citation', async ({page}) => {
+  await page.route('**/wp-json/rha-geology/v1/point?**',route=>route.fulfill({
+    status:200,contentType:'application/json',
+    body:JSON.stringify({source:'Macrostrat',units:[
+      {name:'Example sandstone',t_int_name:'Eocene',lith:'sandstone',source_id:'133',map_id:'1001'},
+      {name:'Example basalt',t_int_name:'Jurassic',lith:'basalt',source_id:'7',map_id:'1002'}
+    ],note:'Geological context only. Not collecting permission.'})
+  }));
+  await page.route('**/wp-json/rha-geology/v1/source?**',route=>route.fulfill({
+    status:200,contentType:'application/json',
+    body:JSON.stringify({source_id:133,provider:'Macrostrat',name:'Test reference source',authors:'Research Team',catalog_url:'https://macrostrat.org/api/v2/defs/sources?source_id=133'})
+  }));
+  await page.goto('/rockhounding-map/montana/ruby-reservoir-garnet-shoreline/',{waitUntil:'domcontentloaded'});
+  await page.locator('.rha-geology-guide-controls button').filter({hasText:'Geology layer'}).click();
+  const panel=page.locator('.rha-geology-guide-panel');
+  await panel.getByRole('button',{name:'Geology at guide point'}).click();
+  const units=panel.locator('.rha-geo-guide-unit');
+  await expect(units).toHaveCount(2);
+  const era=panel.getByRole('combobox',{name:'Geological era filter for inspected rock units'});
+  const type=panel.getByRole('combobox',{name:'Rock type filter for inspected rock units'});
+  await era.selectOption('cenozoic');
+  await expect(panel.locator('.rha-geo-guide-unit:visible')).toHaveCount(1);
+  await type.selectOption('igneous');
+  await expect(panel.locator('.rha-geo-guide-unit:visible')).toHaveCount(0);
+  await type.selectOption('sedimentary');
+  await expect(panel.locator('.rha-geo-guide-unit:visible')).toHaveCount(1);
+  const source=panel.locator('.rha-geo-guide-unit:visible').first();
+  await source.getByRole('button',{name:'Show original map reference'}).click();
+  await expect(source.locator('.rha-geo-v3-citation')).toContainText('Test reference source');
+});
