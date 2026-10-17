@@ -1,0 +1,7 @@
+/* Real Macrostrat polygon overlay: controls inside existing geology panel */
+.rha-geo-v4-block{margin:11px 0 6px;padding:11px 12px;border:1px solid #a6c9c1;border-radius:9px;background:#eff9f6;color:#20453e;font:13px/1.45 system-ui,sans-serif}
+.rha-geo-v4-toggle{display:inline-block;border-radius:7px;border:1px solid #176b68;background:#fff;color:#175958;padding:9px 12px;font-size:13px;font-weight:700;cursor:pointer}
+.rha-geo-v4-toggle[aria-pressed=true]{background:#176b68;color:#fff}
+.rha-geo-v4-description{margin:7px 0!important;font-size:12px!important;line-height:1.45!important;color:#2c5148!important}
+.rha-geo-v4-status{padding:7px 9px;border-radius:5px;background:#e3f0eb;color:#1c5148;font-size:12px;overflow-wrap:anywhere}
+@media(max-width:680px){.rha-geo-v4-block{margin:8px 0;padding:9px}.rha-geo-v4-toggle{width:100%;min-height:38px}}
