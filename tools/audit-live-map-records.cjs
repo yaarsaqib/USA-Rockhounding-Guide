@@ -44,6 +44,24 @@ function sample(r){return Object.fromEntries(['record_id','state_code','entity_n
   samplesByStatus:Object.fromEntries(['ready','conditional','research','protected'].map(k=>[k,records.filter(r=>r.status===k).slice(0,7).map(sample)]))};
  const path='audit/location-status/current-atlas-audit.json';
  fs.mkdirSync('audit/location-status',{recursive:true});
+
+ const namedBLM=[
+  ['Black Hills Rockhound Area','AZ',/black hills.*rockhound/i],
+  ['Round Mountain Rockhound Area','AZ',/round mountain.*rockhound/i],
+  ['Wiley Well Geode Beds','CA',/wiley well/i],
+  ['Chambless Rock Collecting Area','CA',/chambless/i],
+  ['Savahia Peak Rock Collecting Area','CA',/savahia peak/i],
+  ['Garnet Hill','NV',/garnet hill/i],
+  ['Sunstone Collection Area','OR',/sunstone.*collect/i],
+  ['Dugway Geode Beds','UT',/dugway.*geode/i],
+  ['Topaz Mountain Rockhound Recreation Area','UT',/topaz mountain/i]
+ ];
+ const blmMatches=namedBLM.map(([name,state,re])=>{
+  const matches=records.filter(r=>r.state_code===state&&re.test(r.entity_name||''));
+  return {name,state,matches:matches.map(sample)};
+ });
+ out.blmNamedMatches=blmMatches;
+ console.log('ATLAS_BLM_NAMED_MATCHES '+JSON.stringify(blmMatches));
  fs.writeFileSync(path,JSON.stringify(out,null,2));
  console.log('ATLAS_AUDIT_SUMMARY '+JSON.stringify({recordCount:out.recordCount,statuses,nonReadySourceBuckets:sourceBuckets,conditionalBuckets:conditional,sourceSummary:sourceByStatus,navNotReady:navYesNotReady.length,recNotReady:recYesNotReady.length,readyWithoutNavigation:readyNavFalse.length,stale:out.staleRechecks}));
  console.log('ATLAS_NAV_NOT_READY_EXAMPLES '+JSON.stringify(out.navEnabledExamples.slice(0,8)));
