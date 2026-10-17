@@ -1,0 +1,26 @@
+name: Audit live USA Rockhounding location classifications
+on:
+  workflow_dispatch:
+  push:
+    branches: [audit/location-status-and-100k-source-20261017]
+    paths: [tools/audit-live-map-records.cjs,.github/workflows/audit-live-map-records.yml]
+permissions:
+  contents: write
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tools/audit-live-map-records.cjs
+      - name: Save evidence-based audit
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add audit/location-status/current-atlas-audit.json
+          git diff --cached --quiet || git commit -m 'Archive current national map status and eligibility audit'
+          git pull --rebase origin audit/location-status-and-100k-source-20261017
+          git push origin HEAD:audit/location-status-and-100k-source-20261017
