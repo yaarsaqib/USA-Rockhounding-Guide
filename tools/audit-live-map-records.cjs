@@ -42,6 +42,37 @@ function sample(r){return Object.fromEntries(['record_id','state_code','entity_n
   staleRechecks:records.filter(r=>r.checked_at&&String(r.checked_at)<"2025-10-17").length,
   stateCount:group(records,'state_code',65),sourceBucketUniverse:group(records,'source_bucket',85),
   samplesByStatus:Object.fromEntries(['ready','conditional','research','protected'].map(k=>[k,records.filter(r=>r.status===k).slice(0,7).map(sample)]))};
+
+ // Full review register: current modeled status, NOT an assertion that an
+ // official manager's rules were freshly verified today.
+ const columns=['record_id','state_code','entity_name','status','source_bucket','checked_at','source_key','primary_blocker','navigation_active','near_me_eligible','safe_to_recommend_now','review_queue','public_reason'];
+ const queueAction=r=>r.status==='ready'?'RECHECK_CURRENT_MANAGER_RULES_AND_CLOSURES':
+   r.status==='conditional'?'RESOLVE_STATED_CONDITION_WITH_MANAGER':
+   r.status==='research'?'PROVE_EXACT_PARCEL_ACCESS_MINERAL_RIGHTS_AND_COLLECTING_AUTHORITY':
+   r.status==='protected'?'PROTECTED_OR_VIEWING_ONLY_DO_NOT_PROMOTE':
+   'POLICY_REFERENCE_NOT_PUBLIC_COLLECTING_SITE';
+ const csv=(value)=>'"'+String(value??'').replace(/[\r\n]+/g,' ').replace(/"/g,'""').slice(0,1200)+'"';
+ const reviewRows=records.map(r=>({
+   record_id:r.record_id,state_code:r.state_code,entity_name:r.entity_name,
+   status:r.status,source_bucket:r.source_bucket,checked_at:r.checked_at,source_key:r.source_key,
+   primary_blocker:r.primary_blocker,navigation_active:!!r.navigation_active,
+   near_me_eligible:!!r.near_me_eligible,safe_to_recommend_now:!!r.safe_to_recommend_now,
+   review_queue:queueAction(r),public_reason:r.public_reason||r.reason||''
+ }));
+ const statusReviewCsv=[columns.join(','),...reviewRows.map(r=>columns.map(k=>csv(r[k])).join(','))].join('\n');
+ fs.writeFileSync('audit/location-status/all-core-locations-current-status.csv',statusReviewCsv);
+ const stateMatrix={};
+ for(const r of records){
+   const code=r.state_code||'OTHER';
+   if(!stateMatrix[code])stateMatrix[code]={state:code,total:0,ready:0,conditional:0,research:0,protected:0,policy:0,researchWithTravelNav:0};
+   const row=stateMatrix[code];row.total++;if(Object.hasOwn(row,r.status))row[r.status]++;
+   if(r.status==='research'&&r.navigation_active)row.researchWithTravelNav++;
+ }
+ const col2=['state','total','ready','conditional','research','protected','policy','researchWithTravelNav'];
+ fs.writeFileSync('audit/location-status/state-by-state-status-review.csv',
+    [col2.join(','),...Object.values(stateMatrix).sort((a,b)=>a.state.localeCompare(b.state)).map(r=>col2.map(k=>csv(r[k])).join(','))].join('\n'));
+ console.log('ATLAS_REVIEW_REGISTER '+JSON.stringify({total:reviewRows.length,states:Object.keys(stateMatrix).length,fullRegister:'audit/location-status/all-core-locations-current-status.csv',stateMatrix:'audit/location-status/state-by-state-status-review.csv'}));
+
  const path='audit/location-status/current-atlas-audit.json';
  fs.mkdirSync('audit/location-status',{recursive:true});
 
