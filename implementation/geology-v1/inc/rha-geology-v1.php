@@ -32,7 +32,7 @@ add_action('rest_api_init', function () {
             if ($lat === false || $lng === false || $lat < -90 || $lat > 90 || $lng < -180 || $lng > 180) {
                 return new WP_Error('rha_geo_invalid', 'Invalid coordinates.', array('status' => 400));
             }
-            $cache_key = 'rha_geo_' . md5(sprintf('%.4f,%.4f', $lat, $lng));
+            $cache_key = 'rha_geo_v3_' . md5(sprintf('%.4f,%.4f', $lat, $lng));
             $cached = get_transient($cache_key);
             if ($cached !== false) return rest_ensure_response($cached);
             $url = add_query_arg(array('lat' => sprintf('%.5f', $lat), 'lng' => sprintf('%.5f', $lng)), 'https://macrostrat.org/api/v2/geologic_units/map');
@@ -47,7 +47,7 @@ add_action('rest_api_init', function () {
             foreach (array_slice($items, 0, 4) as $item) {
                 if (!is_array($item)) continue;
                 $row = array();
-                foreach (array('name', 'strat_name', 'unit_name', 'age', 't_int_name', 'b_int_name', 'lith', 'descrip', 'source', 'source_id', 'map_id', 'map_unit_id') as $field) {
+                foreach (array('name', 'strat_name', 'unit_name', 'age', 't_int_name', 'b_int_name', 'lith', 'descrip', 'source', 'source_id', 'map_id', 'map_unit_id', 'best_t_age', 'best_b_age', 'best_age_top', 'best_age_bottom') as $field) {
                     if (isset($item[$field]) && is_scalar($item[$field])) $row[$field] = substr((string) $item[$field], 0, 250);
                 }
                 if (!empty($item['liths']) && is_array($item['liths'])) {
