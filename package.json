@@ -1,0 +1,11 @@
+{
+  "name": "usa-rockhounding-geology-tests",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "test:geology": "playwright test --config=playwright.config.cjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.55.0"
+  }
+}
