@@ -98,14 +98,16 @@ function sample(r){return Object.fromEntries(['record_id','state_code','entity_n
    operational=JSON.parse(match[2]);
  }catch(e){console.error('ATLAS_SUPPLEMENT_EXPORT_ERROR',e.message);process.exitCode=1;}
  const patched=records.map(r=>operational[r.record_id]?{...r,...operational[r.record_id]}:r);
- const unique=new Set(patched.map(r=>String(r.record_id||'').toLowerCase()));
- const names=new Set(patched.map(r=>String(r.state_code||'').toLowerCase()+'|'+String(r.entity_name||'').trim().toLowerCase()));
+ // Match the map's actual identity rules: different USGS deposit IDs may
+ // share a generic name ("Prospect", "Mine") but are distinct locations.
+ const unique=new Set(patched.map(r=>String(r.record_id||'').toLowerCase()+'|'+String(r.state_code||'').toLowerCase()+'|'+String(r.entity_name||'').trim().toLowerCase()));
+ const coreNames=new Set(patched.map(r=>String(r.state_code||'').toLowerCase()+'|'+String(r.entity_name||'').trim().toLowerCase()));
  const added=[];
  for(const r of [...siteSupplements,...usgs]){
-   const id=String(r.record_id||'').toLowerCase();
    const key=String(r.state_code||'').toLowerCase()+'|'+String(r.entity_name||'').trim().toLowerCase();
-   if(unique.has(id)||names.has(key))continue;
-   unique.add(id);names.add(key);added.push(r);
+   const identity=String(r.record_id||'').toLowerCase()+'|'+key;
+   if(unique.has(identity)||coreNames.has(key))continue;
+   unique.add(identity);added.push(r);
  }
  const allRecords=[...patched,...added];
  out.fullDisplayedInventory={
