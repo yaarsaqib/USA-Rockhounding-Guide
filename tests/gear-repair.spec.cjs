@@ -47,3 +47,23 @@ test('Gear Hub has accurate merchant link labels and no unrelated external links
  expect(main).not.toContain('href="https://www.estwing.com');
  expect(main).not.toContain('href="https://hitechdiamond.com');
 });
+
+
+test('all 128 Gear Hub product image URLs return real image files',async({page,request})=>{
+  await page.goto('/gear/',{waitUntil:'domcontentloaded'});
+  const imgs=await page.locator('#usarh-shop-products img.usarh-product-photo').evaluateAll(nodes=>nodes.map(n=>({alt:n.alt,url:n.getAttribute('src')})));
+  expect(imgs).toHaveLength(128);
+  const problems=[];
+  for(let i=0;i<imgs.length;i+=10){
+    const batch=imgs.slice(i,i+10);
+    await Promise.all(batch.map(async item=>{
+      try{
+        const response=await request.get(item.url,{timeout:20000});
+        const ct=response.headers()['content-type']||'';
+        if(!response.ok()||!ct.startsWith('image/'))problems.push({alt:item.alt,url:item.url,status:response.status(),contentType:ct});
+      }catch(error){problems.push({alt:item.alt,url:item.url,error:String(error).slice(0,150)});}
+    }));
+  }
+  if(problems.length)console.log('PRODUCT IMAGE ERRORS:',JSON.stringify(problems));
+  expect(problems).toEqual([]);
+});
