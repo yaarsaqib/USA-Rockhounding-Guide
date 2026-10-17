@@ -73,6 +73,64 @@ function sample(r){return Object.fromEntries(['record_id','state_code','entity_n
     [col2.join(','),...Object.values(stateMatrix).sort((a,b)=>a.state.localeCompare(b.state)).map(r=>col2.map(k=>csv(r[k])).join(','))].join('\n'));
  console.log('ATLAS_REVIEW_REGISTER '+JSON.stringify({total:reviewRows.length,states:Object.keys(stateMatrix).length,fullRegister:'audit/location-status/all-core-locations-current-status.csv',stateMatrix:'audit/location-status/state-by-state-status-review.csv'}));
 
+
+ // Pull the live 11,000-record USGS supplement and seven site/operational
+ // additions. This export documents all on-map statuses without upgrading
+ // a research mineral occurrence into Ready.
+ let usgs=[],siteSupplements=[],operational={};
+ try{
+   usgs=JSON.parse(await download('https://usarockhounding.com/wp-content/uploads/rha-data/usgs-mrds-research.json'));
+   if(!Array.isArray(usgs))throw Error('USGS supplement is not an array');
+ }catch(e){console.error('ATLAS_USGS_EXPORT_ERROR',e.message);process.exitCode=1;}
+ try{
+   const markup=await download('https://usarockhounding.com/rockhounding-map/');
+   const match=markup.match(/window\.RH_MAP_SUPPLEMENT=(\[[\s\S]*?\]);window\.RH_OPERATIONAL_OVERRIDES=(\{[\s\S]*?\});/);
+   if(!match)throw Error('Official supplement inline script missing');
+   siteSupplements=JSON.parse(match[1]);
+   operational=JSON.parse(match[2]);
+ }catch(e){console.error('ATLAS_SUPPLEMENT_EXPORT_ERROR',e.message);process.exitCode=1;}
+ const patched=records.map(r=>operational[r.record_id]?{...r,...operational[r.record_id]}:r);
+ const unique=new Set(patched.map(r=>String(r.record_id||'').toLowerCase()));
+ const names=new Set(patched.map(r=>String(r.state_code||'').toLowerCase()+'|'+String(r.entity_name||'').trim().toLowerCase()));
+ const added=[];
+ for(const r of [...siteSupplements,...usgs]){
+   const id=String(r.record_id||'').toLowerCase();
+   const key=String(r.state_code||'').toLowerCase()+'|'+String(r.entity_name||'').trim().toLowerCase();
+   if(unique.has(id)||names.has(key))continue;
+   unique.add(id);names.add(key);added.push(r);
+ }
+ const allRecords=[...patched,...added];
+ out.fullDisplayedInventory={
+   total:allRecords.length,core:records.length,
+   siteSupplement:siteSupplements.length,
+   usgsSupplement:usgs.length,
+   addedAfterDeduplication:added.length,
+   byStatus:group(allRecords,'status',15),
+   sourceNotes:'USGS MRDS means research only; none is a verified public collecting destination.'
+ };
+ const fullCsvRows=allRecords.map(r=>({
+   record_id:r.record_id,state_code:r.state_code,entity_name:r.entity_name,
+   status:r.status,source_bucket:r.source_bucket,checked_at:r.checked_at,source_key:r.source_key,
+   primary_blocker:r.primary_blocker,navigation_active:!!r.navigation_active,
+   near_me_eligible:!!r.near_me_eligible,safe_to_recommend_now:!!r.safe_to_recommend_now,
+   review_queue:queueAction(r),public_reason:r.public_reason||r.reason||'',
+   source_dataset:String(r.record_id||'').startsWith('usgs-mrds::')?'USGS_MRDS_RESEARCH':String(r.record_id||'').startsWith('supplement::')?'SITE_SUPPLEMENT':'CORE_ATLAS'
+ }));
+ const fullCols=[...columns,'source_dataset'];
+ fs.writeFileSync('audit/location-status/all-displayed-locations-current-status.csv',
+    [fullCols.join(','),...fullCsvRows.map(row=>fullCols.map(k=>csv(row[k])).join(','))].join('\n'));
+ const matrixAll={};
+ for(const row of allRecords){
+   const st=row.state_code||'OTHER';
+   if(!matrixAll[st])matrixAll[st]={state:st,total:0,ready:0,conditional:0,research:0,protected:0,policy:0,usgs:0};
+   const target=matrixAll[st];target.total++;if(Object.hasOwn(target,row.status))target[row.status]++;
+   if(String(row.record_id||'').startsWith('usgs-mrds::'))target.usgs++;
+ }
+ const columnsAll=['state','total','ready','conditional','research','protected','policy','usgs'];
+ fs.writeFileSync('audit/location-status/all-inventory-by-state.csv',
+   [columnsAll.join(','),...Object.values(matrixAll).sort((a,b)=>a.state.localeCompare(b.state)).map(r=>columnsAll.map(k=>csv(r[k])).join(','))].join('\n'));
+ console.log('ATLAS_FULL_INVENTORY '+JSON.stringify(out.fullDisplayedInventory));
+
  const path='audit/location-status/current-atlas-audit.json';
  fs.mkdirSync('audit/location-status',{recursive:true});
 
