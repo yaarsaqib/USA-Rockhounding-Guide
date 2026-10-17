@@ -1,0 +1,12 @@
+/* Geological intelligence v3: compact controls within existing geology panels */
+.rha-geo-v3-controls{display:flex;gap:9px;flex-wrap:wrap;align-items:end;margin:10px 0 8px;padding-top:10px;border-top:1px solid #b6d1cb}
+.rha-geo-v3-label{display:flex;min-width:125px;flex:1;flex-direction:column;gap:4px;font:600 12px system-ui,sans-serif;color:#193e38}
+.rha-geo-v3-label select{box-sizing:border-box;width:100%;max-width:230px;min-height:35px;border:1px solid #a0bcb4;border-radius:6px;padding:7px 9px;background:#fff;color:#163d39;font:600 13px system-ui,sans-serif}
+.rha-geo-v3-note{margin:4px 0!important;flex:1 1 100%;color:#35514b!important;font-size:11px!important;line-height:1.45}
+.rha-geo-v3-count{padding:5px 0;color:#17463d;font-size:12px;font-weight:700}
+.rha-geo-unit[hidden],.rha-geo-guide-unit[hidden],.rha-geo-v3-citation[hidden]{display:none!important}
+.rha-geo-v3-source{margin-top:7px;padding-top:6px;border-top:1px solid #b9d0cb}
+.rha-geo-v3-source button{padding:5px 8px;border:1px solid #8ca9a2;background:#f8fbfa;color:#175553;border-radius:6px;cursor:pointer;font:600 12px system-ui,sans-serif}
+.rha-geo-v3-citation{padding:6px 0;overflow-wrap:anywhere;font-size:12px;color:#1b4942}
+.rha-geo-v3-citation a{color:#0f6171;text-decoration:underline}
+@media(max-width:650px){.rha-geo-v3-label{min-width:110px}.rha-geo-v3-label select{max-width:none}}
