@@ -15,7 +15,7 @@ function init(){
  const bar=document.createElement('div');bar.className='rha-gear-catalog-bar';
  const intro=document.createElement('div');
  const title=document.createElement('strong');title.textContent='Browse the gear catalog';
- const subtitle=document.createElement('span');subtitle.textContent=cards.length+' photographed product records · choose the job first';
+ const subtitle=document.createElement('span');subtitle.textContent=cards.length+' catalog entries · start with the task' ;
  intro.append(title,subtitle);
  const top=document.createElement('a');top.href='#usarh-shop-products';top.textContent='Browse products ↓';top.className='rha-gear-toplink';
  bar.append(intro,top);
@@ -53,8 +53,8 @@ function init(){
  empty.textContent='No products match this search and category. Change the search or select All categories.';
  results.insertAdjacentElement('afterend',empty);
 
- let limit=18,queued=false;
- const chunk=18;
+ const chunk=window.matchMedia('(max-width: 640px)').matches?6:9;
+ let limit=chunk,queued=false;
  function eligible(card) {
   // Existing plugin search/category behavior owns the hidden property.
   return !card.hidden && card.getAttribute('aria-hidden')!=='true' && card.style.display!=='none';
@@ -65,7 +65,11 @@ function init(){
   for(const card of cards){
    const show=eligible(card)&&displayed<limit;
    card.classList.toggle('rha-gear-page-hidden',!show);
-   if(show)displayed++;
+   if(show){
+    displayed++;
+    const image=card.querySelector('img.usarh-product-photo');
+    if(image){image.loading='eager';if(displayed<=3)image.fetchPriority='high';}
+   }
   }
   results.textContent=matching.length
    ? 'Showing '+displayed+' of '+matching.length+' matching products ('+cards.length+' in catalog).'
