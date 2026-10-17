@@ -1,0 +1,1742 @@
+{
+  "date": "2026-10-17T14:52:18.052Z",
+  "bundleBytes": 21998494,
+  "bundleKeys": [
+    "records",
+    "counties",
+    "states",
+    "summaries"
+  ],
+  "recordCount": 5865,
+  "statuses": [
+    [
+      "research",
+      3926
+    ],
+    [
+      "policy",
+      1085
+    ],
+    [
+      "protected",
+      458
+    ],
+    [
+      "conditional",
+      213
+    ],
+    [
+      "ready",
+      183
+    ]
+  ],
+  "statusSummary": {
+    "ready": {
+      "count": 183,
+      "withSourceUrl": 0,
+      "withCheckedAt": 183,
+      "withExactPoint": 7,
+      "navigationEnabled": 183
+    },
+    "conditional": {
+      "count": 213,
+      "withSourceUrl": 0,
+      "withCheckedAt": 213,
+      "withExactPoint": 16,
+      "navigationEnabled": 213
+    },
+    "research": {
+      "count": 3926,
+      "withSourceUrl": 0,
+      "withCheckedAt": 3926,
+      "withExactPoint": 19,
+      "navigationEnabled": 3926
+    },
+    "protected": {
+      "count": 458,
+      "withSourceUrl": 0,
+      "withCheckedAt": 458,
+      "withExactPoint": 10,
+      "navigationEnabled": 458
+    },
+    "policy": {
+      "count": 1085,
+      "withSourceUrl": 0,
+      "withCheckedAt": 1085,
+      "withExactPoint": 0,
+      "navigationEnabled": 0
+    }
+  },
+  "nonReadySourceBuckets": [
+    [
+      "PUBLISHABLE_RESEARCH_ONLY",
+      3870
+    ],
+    [
+      "REFERENCE_OR_POLICY_CONTROL",
+      1085
+    ],
+    [
+      "PROHIBITED_OR_VIEWING_ONLY",
+      447
+    ],
+    [
+      "PUBLISHABLE_CONDITIONAL",
+      197
+    ],
+    [
+      "allowed_with_conditions",
+      14
+    ],
+    [
+      "HOLD_NOINDEX",
+      10
+    ],
+    [
+      "HELD_FOR_MAINTENANCE",
+      9
+    ],
+    [
+      "supporting_access_only",
+      8
+    ],
+    [
+      "PROHIBITED_VIEWING_ONLY",
+      8
+    ],
+    [
+      "temporarily_closed",
+      3
+    ],
+    [
+      "PRIVATE_PERMISSION_CONTROLLED_REFERENCE_NOT_PUBLIC_LAND_PIN",
+      3
+    ],
+    [
+      "REFERENCE_CONTROL",
+      3
+    ],
+    [
+      "NOINDEX_LAND_STATUS_UNRESOLVED",
+      2
+    ],
+    [
+      "REFERENCE_ONLY_NOT_COLLECTING_PIN",
+      2
+    ],
+    [
+      "CONDITIONAL_REFERENCE_NOT_CLAIM_CLEARANCE",
+      2
+    ],
+    [
+      "CURRENTLY_CLOSED_REFERENCE_ONLY",
+      2
+    ],
+    [
+      "not_proven_for_rockhounding",
+      1
+    ],
+    [
+      "PRIVATE_OPERATOR_VERIFY_CURRENT_VISITOR_OPTIONS",
+      1
+    ],
+    [
+      "OFFICIAL_SITE_CLOSED_EARLY_2026",
+      1
+    ],
+    [
+      "HARDER_HOLD_SPECIAL_MANAGEMENT_MINING_NOINDEX",
+      1
+    ],
+    [
+      "STATE_COMPLETE_HOLD_PLSS_FEATURE_IDS_CAPTURED_RIGHTS_ACCESS_UNRESOLVED_NOINDEX",
+      1
+    ],
+    [
+      "HARD_HOLD_NAMED_BLM_DISTRICT_CONTEXT_NOINDEX",
+      1
+    ],
+    [
+      "HOLD_MULTI_MANAGER_PLUS_DYNAMIC_ACCESS_NOINDEX",
+      1
+    ],
+    [
+      "HARDER_HOLD_ACEC_RNA_INTERPRETIVE_RESOURCE_NOINDEX",
+      1
+    ],
+    [
+      "HARDER_HOLD_SPECIAL_MANAGEMENT_PLUS_ACTIVE_TRIP_GATE_NOINDEX",
+      1
+    ],
+    [
+      "HARD_HOLD_PRIVATE_NOINDEX",
+      1
+    ],
+    [
+      "NOINDEX_MINERAL_RIGHTS_UNRESOLVED",
+      1
+    ],
+    [
+      "site_access_for_common_invertebrate_fossil_area",
+      1
+    ],
+    [
+      "NOINDEX_HAZARD_CONTEXT_ONLY",
+      1
+    ],
+    [
+      "RESEARCH_CONDITIONAL_NOT_CLAIM_CLEARANCE",
+      1
+    ],
+    [
+      "GUIDED_CONTROLLED_REFERENCE_NO_INDEPENDENT_MINE_ACCESS",
+      1
+    ],
+    [
+      "CURRENTLY_CLOSED_ROUTE_WAYPOINT_ONLY",
+      1
+    ],
+    [
+      "conditional_claim_overlap",
+      1
+    ]
+  ],
+  "conditionalBuckets": [
+    [
+      "PUBLISHABLE_CONDITIONAL",
+      197
+    ],
+    [
+      "allowed_with_conditions",
+      14
+    ],
+    [
+      "PRIVATE_OPERATOR_VERIFY_CURRENT_VISITOR_OPTIONS",
+      1
+    ],
+    [
+      "site_access_for_common_invertebrate_fossil_area",
+      1
+    ]
+  ],
+  "researchBuckets": [
+    [
+      "PUBLISHABLE_RESEARCH_ONLY",
+      3870
+    ],
+    [
+      "HOLD_NOINDEX",
+      10
+    ],
+    [
+      "HELD_FOR_MAINTENANCE",
+      9
+    ],
+    [
+      "supporting_access_only",
+      8
+    ],
+    [
+      "PROHIBITED_VIEWING_ONLY",
+      8
+    ],
+    [
+      "PRIVATE_PERMISSION_CONTROLLED_REFERENCE_NOT_PUBLIC_LAND_PIN",
+      3
+    ],
+    [
+      "REFERENCE_CONTROL",
+      3
+    ],
+    [
+      "REFERENCE_ONLY_NOT_COLLECTING_PIN",
+      2
+    ],
+    [
+      "CONDITIONAL_REFERENCE_NOT_CLAIM_CLEARANCE",
+      2
+    ],
+    [
+      "not_proven_for_rockhounding",
+      1
+    ],
+    [
+      "HARDER_HOLD_SPECIAL_MANAGEMENT_MINING_NOINDEX",
+      1
+    ],
+    [
+      "STATE_COMPLETE_HOLD_PLSS_FEATURE_IDS_CAPTURED_RIGHTS_ACCESS_UNRESOLVED_NOINDEX",
+      1
+    ],
+    [
+      "HARD_HOLD_NAMED_BLM_DISTRICT_CONTEXT_NOINDEX",
+      1
+    ],
+    [
+      "HOLD_MULTI_MANAGER_PLUS_DYNAMIC_ACCESS_NOINDEX",
+      1
+    ],
+    [
+      "HARDER_HOLD_ACEC_RNA_INTERPRETIVE_RESOURCE_NOINDEX",
+      1
+    ],
+    [
+      "HARDER_HOLD_SPECIAL_MANAGEMENT_PLUS_ACTIVE_TRIP_GATE_NOINDEX",
+      1
+    ],
+    [
+      "HARD_HOLD_PRIVATE_NOINDEX",
+      1
+    ],
+    [
+      "RESEARCH_CONDITIONAL_NOT_CLAIM_CLEARANCE",
+      1
+    ],
+    [
+      "GUIDED_CONTROLLED_REFERENCE_NO_INDEPENDENT_MINE_ACCESS",
+      1
+    ],
+    [
+      "conditional_claim_overlap",
+      1
+    ]
+  ],
+  "navigationEnabledButNotReady": 4597,
+  "navEnabledExamples": [
+    {
+      "record_id": "al::al-county-geology-autauga",
+      "state_code": "AL",
+      "entity_name": "Autauga County Geology and Mineral Research",
+      "status": "research",
+      "source_bucket": "PUBLISHABLE_RESEARCH_ONLY",
+      "reason": "Official statewide geology supports county-level research, but mapped occurrence does not establish public entry, mineral ownership, mine/quarry access, roadcut safety or specimen-removal authority.",
+      "public_reason": "Official statewide geology supports county-level research, but mapped occurrence does not establish public entry, mineral ownership, mine/quarry access, roadcut safety or specimen-removal authority.",
+      "primary_blocker": "EXACT_SITE_OWNERSHIP_ACCESS_AND_COLLECTION_AUTHORITY_REQUIRED",
+      "source_url": null,
+      "source_key": "AL124_GSA_MAP",
+      "checked_at": "2026-08-30",
+      "navigation_active": true,
+      "near_me_eligible": false,
+      "coordinate_safe": false,
+      "latitude": null,
+      "longitude": null,
+      "display_mode": "county_context",
+      "safe_to_recommend_now": false
+    },
+    {
+      "record_id": "al::al-county-geology-baldwin",
+      "state_code": "AL",
+      "entity_name": "Baldwin County Geology and Mineral Research",
+      "status": "research",
+      "source_bucket": "PUBLISHABLE_RESEARCH_ONLY",
+      "reason": "Official statewide geology supports county-level research, but mapped occurrence does not establish public entry, mineral ownership, mine/quarry access, roadcut safety or specimen-removal authority.",
+      "public_reason": "Official statewide geology supports county-level research, but mapped occurrence does not establish public entry, mineral ownership, mine/quarry access, roadcut safety or specimen-removal authority.",
+      "primary_blocker": "EXACT_SITE_OWNERSHIP_ACCESS_AND_COLLECTION_AUTHORITY_REQUIRED",
+      "source_url": null,
+      "source_key": "AL124_GSA_MAP",
+      "checked_at": "2026-08-30",
+      "navigation_active": true,
+      "near_me_eligible": false,
+      "coordinate_safe": false,
+      "latitude": null,
+      "longitude": null,
+      "display_mode": "county_context",
+      "safe_to_recommend_now": false
+    },
+    {
+      "record_id": "al::national-forests-alabama-casual-mineral-collecting",
+      "state_code": "AL",
+      "entity_name": "National Forests in Alabama — Casual Rock/Mineral/Invertebrate Fossil Collecting",
+      "status": "conditional",
+      "source_bucket": "PUBLISHABLE_CONDITIONAL",
+      "reason": "Forest Service guidance and the Alabama forest plan support casual noncommercial mineral collection, but exact NFS parcel, special-area/wilderness status, active claims/private mineral rights, local orders, archaeological protections, fossil type and disturbance method must be checked before a specific trip.",
+      "public_reason": "Forest Service guidance and the Alabama forest plan support casual noncommercial mineral collection, but exact NFS parcel, special-area/wilderness status, active claims/private mineral rights, local orders, archaeological protections, fossil type and disturbance method must be checked before a specific trip.",
+      "primary_blocker": "EXACT_NFS_PARCEL_SPECIAL_AREA_CLAIM_RIGHTS_AND_LOCAL_ORDER_CHECK_REQUIRED",
+      "source_url": null,
+      "source_key": "AL124_USFS_REC",
+      "checked_at": "2026-08-30",
+      "navigation_active": true,
+      "near_me_eligible": false,
+      "coordinate_safe": false,
+      "latitude": null,
+      "longitude": null,
+      "display_mode": "named_place_query",
+      "safe_to_recommend_now": false
+    },
+    {
+      "record_id": "al::al-county-geology-barbour",
+      "state_code": "AL",
+      "entity_name": "Barbour County Geology and Mineral Research",
+      "status": "research",
+      "source_bucket": "PUBLISHABLE_RESEARCH_ONLY",
+      "reason": "Official statewide geology supports county-level research, but mapped occurrence does not establish public entry, mineral ownership, mine/quarry access, roadcut safety or specimen-removal authority.",
+      "public_reason": "Official statewide geology supports county-level research, but mapped occurrence does not establish public entry, mineral ownership, mine/quarry access, roadcut safety or specimen-removal authority.",
+      "primary_blocker": "EXACT_SITE_OWNERSHIP_ACCESS_AND_COLLECTION_AUTHORITY_REQUIRED",
+      "source_url": null,
+      "source_key": "AL124_GSA_MAP",
+      "checked_at": "2026-08-30",
+      "navigation_active": true,
+      "near_me_eligible": false,
+      "coordinate_safe": false,
+      "latitude": null,
+      "longitude": null,
+      "display_mode": "county_context",
+      "safe_to_recommend_now": false
+    },
+    {
+      "record_id": "al::al-county-geology-bibb",
+      "state_code": "AL",
+      "entity_name": "Bibb County Geology and Mineral Research",
+      "status": "research",
+      "source_bucket": "PUBLISHABLE_RESEARCH_ONLY",
+      "reason": "Official statewide geology supports county-level research, but mapped occurrence does not establish public entry, mineral ownership, mine/quarry access, roadcut safety or specimen-removal authority.",
+      "public_reason": "Official statewide geology supports county-level research, but mapped occurrence does not establish public entry, mineral ownership, mine/quarry access, roadcut safety or specimen-removal authority.",
+      "primary_blocker": "EXACT_SITE_OWNERSHIP_ACCESS_AND_COLLECTION_AUTHORITY_REQUIRED",
+      "source_url": null,
+      "source_key": "AL124_GSA_MAP",
+      "checked_at": "2026-08-30",
+      "navigation_active": true,
+      "near_me_eligible": false,
+      "coordinate_safe": false,
+      "latitude": null,
+      "longitude": null,
+      "display_mode": "county_context",
+      "safe_to_recommend_now": false
+    },
+    {
+      "record_id": "al::almnh-future-fossil-excursions",
+      "state_code": "AL",
+      "entity_name": "Alabama Museum of Natural History — Future Fossil Excursions",
+      "status": "conditional",
+      "source_bucket": "PUBLISHABLE_CONDITIONAL",
+      "reason": "The museum confirms authorized fossil collecting on its guided excursions, but every 2026 date is sold out and waitlists are closed; the 2026 season ended before this audit. A newly published future calendar/registration is required.",
+      "public_reason": "The museum confirms authorized fossil collecting on its guided excursions, but every 2026 date is sold out and waitlists are closed; the 2026 season ended before this audit. A newly published future calendar/registration is required.",
+      "primary_blocker": "NO_CURRENT_BOOKABLE_EXCURSION_DATE",
+      "source_url": null,
+      "source_key": "AL124_ALMNH",
+      "checked_at": "2026-08-30",
+      "navigation_active": true,
+      "near_me_eligible": false,
+      "coordinate_safe": false,
+      "latitude": null,
+      "longitude": null,
+      "display_mode": "named_place_query",
+      "safe_to_recommend_now": false
+    },
+    {
+      "record_id": "al::al-county-geology-blount",
+      "state_code": "AL",
+      "entity_name": "Blount County Geology and Mineral Research",
+      "status": "research",
+      "source_bucket": "PUBLISHABLE_RESEARCH_ONLY",
+      "reason": "Official statewide geology supports county-level research, but mapped occurrence does not establish public entry, mineral ownership, mine/quarry access, roadcut safety or specimen-removal authority.",
+      "public_reason": "Official statewide geology supports county-level research, but mapped occurrence does not establish public entry, mineral ownership, mine/quarry access, roadcut safety or specimen-removal authority.",
+      "primary_blocker": "EXACT_SITE_OWNERSHIP_ACCESS_AND_COLLECTION_AUTHORITY_REQUIRED",
+      "source_url": null,
+      "source_key": "AL124_GSA_MAP",
+      "checked_at": "2026-08-30",
+      "navigation_active": true,
+      "near_me_eligible": false,
+      "coordinate_safe": false,
+      "latitude": null,
+      "longitude": null,
+      "display_mode": "county_context",
+      "safe_to_recommend_now": false
+    },
+    {
+      "record_id": "al::al-county-geology-bullock",
+      "state_code": "AL",
+      "entity_name": "Bullock County Geology and Mineral Research",
+      "status": "research",
+      "source_bucket": "PUBLISHABLE_RESEARCH_ONLY",
+      "reason": "Official statewide geology supports county-level research, but mapped occurrence does not establish public entry, mineral ownership, mine/quarry access, roadcut safety or specimen-removal authority.",
+      "public_reason": "Official statewide geology supports county-level research, but mapped occurrence does not establish public entry, mineral ownership, mine/quarry access, roadcut safety or specimen-removal authority.",
+      "primary_blocker": "EXACT_SITE_OWNERSHIP_ACCESS_AND_COLLECTION_AUTHORITY_REQUIRED",
+      "source_url": null,
+      "source_key": "AL124_GSA_MAP",
+      "checked_at": "2026-08-30",
+      "navigation_active": true,
+      "near_me_eligible": false,
+      "coordinate_safe": false,
+      "latitude": null,
+      "longitude": null,
+      "display_mode": "county_context",
+      "safe_to_recommend_now": false
+    },
+    {
+      "record_id": "al::al-county-geology-butler",
+      "state_code": "AL",
+      "entity_name": "Butler County Geology and Mineral Research",
+      "status": "research",
+      "source_bucket": "PUBLISHABLE_RESEARCH_ONLY",
+      "reason": "Official statewide geology supports county-level research, but mapped occurrence does not establish public entry, mineral ownership, mine/quarry access, roadcut safety or specimen-removal authority.",
+      "public_reason": "Official statewide geology supports county-level research, but mapped occurrence does not establish public entry, mineral ownership, mine/quarry access, roadcut safety or specimen-removal authority.",
+      "primary_blocker": "EXACT_SITE_OWNERSHIP_ACCESS_AND_COLLECTION_AUTHORITY_REQUIRED",
+      "source_url": null,
+      "source_key": "AL124_GSA_MAP",
+      "checked_at": "2026-08-30",
+      "navigation_active": true,
+      "near_me_eligible": false,
+      "coordinate_safe": false,
+      "latitude": null,
+      "longitude": null,
+      "display_mode": "county_context",
+      "safe_to_recommend_now": false
+    },
+    {
+      "record_id": "al::al-county-geology-calhoun",
+      "state_code": "AL",
+      "entity_name": "Calhoun County Geology and Mineral Research",
+      "status": "research",
+      "source_bucket": "PUBLISHABLE_RESEARCH_ONLY",
+      "reason": "Official statewide geology supports county-level research, but mapped occurrence does not establish public entry, mineral ownership, mine/quarry access, roadcut safety or specimen-removal authority.",
+      "public_reason": "Official statewide geology supports county-level research, but mapped occurrence does not establish public entry, mineral ownership, mine/quarry access, roadcut safety or specimen-removal authority.",
+      "primary_blocker": "EXACT_SITE_OWNERSHIP_ACCESS_AND_COLLECTION_AUTHORITY_REQUIRED",
+      "source_url": null,
+      "source_key": "AL124_GSA_MAP",
+      "checked_at": "2026-08-30",
+      "navigation_active": true,
+      "near_me_eligible": false,
+      "coordinate_safe": false,
+      "latitude": null,
+      "longitude": null,
+      "display_mode": "county_context",
+      "safe_to_recommend_now": false
+    },
+    {
+      "record_id": "al::al-clay-kaolin-research",
+      "state_code": "AL",
+      "entity_name": "Alabama Clay & Kaolin Resource Research",
+      "status": "research",
+      "source_bucket": "PUBLISHABLE_RESEARCH_ONLY",
+      "reason": "Authoritative geology/resource evidence supports research value, but exact ownership, access, safety and specimen-removal authority are not established for independent collecting.",
+      "public_reason": "Authoritative geology/resource evidence supports research value, but exact ownership, access, safety and specimen-removal authority are not established for independent collecting.",
+      "primary_blocker": "EXACT_SITE_OWNERSHIP_ACCESS_AND_COLLECTION_AUTHORITY_REQUIRED",
+      "source_url": null,
+      "source_key": "AL124_GSA_MRDS",
+      "checked_at": "2026-08-30",
+      "navigation_active": true,
+      "near_me_eligible": false,
+      "coordinate_safe": false,
+      "latitude": null,
+      "longitude": null,
+      "display_mode": "county_context",
+      "safe_to_recommend_now": false
+    },
+    {
+      "record_id": "al::al-county-geology-chambers",
+      "state_code": "AL",
+      "entity_name": "Chambers County Geology and Mineral Research",
+      "status": "research",
+      "source_bucket": "PUBLISHABLE_RESEARCH_ONLY",
+      "reason": "Official statewide geology supports county-level research, but mapped occurrence does not establish public entry, mineral ownership, mine/quarry access, roadcut safety or specimen-removal authority.",
+      "public_reason": "Official statewide geology supports county-level research, but mapped occurrence does not establish public entry, mineral ownership, mine/quarry access, roadcut safety or specimen-removal authority.",
+      "primary_blocker": "EXACT_SITE_OWNERSHIP_ACCESS_AND_COLLECTION_AUTHORITY_REQUIRED",
+      "source_url": null,
+      "source_key": "AL124_GSA_MAP",
+      "checked_at": "2026-08-30",
+      "navigation_active": true,
+      "near_me_eligible": false,
+      "coordinate_safe": false,
+      "latitude": null,
+      "longitude": null,
+      "display_mode": "county_context",
+      "safe_to_recommend_now": false
+    },
+    {
+      "record_id": "al::al-county-geology-cherokee",
+      "state_code": "AL",
+      "entity_name": "Cherokee County Geology and Mineral Research",
+      "status": "research",
+      "source_bucket": "PUBLISHABLE_RESEARCH_ONLY",
+      "reason": "Official statewide geology supports county-level research, but mapped occurrence does not establish public entry, mineral ownership, mine/quarry access, roadcut safety or specimen-removal authority.",
+      "public_reason": "Official statewide geology supports county-level research, but mapped occurrence does not establish public entry, mineral ownership, mine/quarry access, roadcut safety or specimen-removal authority.",
+      "primary_blocker": "EXACT_SITE_OWNERSHIP_ACCESS_AND_COLLECTION_AUTHORITY_REQUIRED",
+      "source_url": null,
+      "source_key": "AL124_GSA_MAP",
+      "checked_at": "2026-08-30",
+      "navigation_active": true,
+      "near_me_eligible": false,
+      "coordinate_safe": false,
+      "latitude": null,
+      "longitude": null,
+      "display_mode": "county_context",
+      "safe_to_recommend_now": false
+    },
+    {
+      "record_id": "al::al-county-geology-chilton",
+      "state_code": "AL",
+      "entity_name": "Chilton County Geology and Mineral Research",
+      "status": "research",
+      "source_bucket": "PUBLISHABLE_RESEARCH_ONLY",
+      "reason": "Official statewide geology supports county-level research, but mapped occurrence does not establish public entry, mineral ownership, mine/quarry access, roadcut safety or specimen-removal authority.",
+      "public_reason": "Official statewide geology supports county-level research, but mapped occurrence does not establish public entry, mineral ownership, mine/quarry access, roadcut safety or specimen-removal authority.",
+      "primary_blocker": "EXACT_SITE_OWNERSHIP_ACCESS_AND_COLLECTION_AUTHORITY_REQUIRED",
+      "source_url": null,
+      "source_key": "AL124_GSA_MAP",
+      "checked_at": "2026-08-30",
+      "navigation_active": true,
+      "near_me_eligible": false,
+      "coordinate_safe": false,
+      "latitude": null,
+      "longitude": null,
+      "display_mode": "county_context",
+      "safe_to_recommend_now": false
+    },
+    {
+      "record_id": "al::al-county-geology-choctaw",
+      "state_code": "AL",
+      "entity_name": "Choctaw County Geology and Mineral Research",
+      "status": "research",
+      "source_bucket": "PUBLISHABLE_RESEARCH_ONLY",
+      "reason": "Official statewide geology supports county-level research, but mapped occurrence does not establish public entry, mineral ownership, mine/quarry access, roadcut safety or specimen-removal authority.",
+      "public_reason": "Official statewide geology supports county-level research, but mapped occurrence does not establish public entry, mineral ownership, mine/quarry access, roadcut safety or specimen-removal authority.",
+      "primary_blocker": "EXACT_SITE_OWNERSHIP_ACCESS_AND_COLLECTION_AUTHORITY_REQUIRED",
+      "source_url": null,
+      "source_key": "AL124_GSA_MAP",
+      "checked_at": "2026-08-30",
+      "navigation_active": true,
+      "near_me_eligible": false,
+      "coordinate_safe": false,
+      "latitude": null,
+      "longitude": null,
+      "display_mode": "county_context",
+      "safe_to_recommend_now": false
+    },
+    {
+      "record_id": "al::al-county-geology-clarke",
+      "state_code": "AL",
+      "entity_name": "Clarke County Geology and Mineral Research",
+      "status": "research",
+      "source_bucket": "PUBLISHABLE_RESEARCH_ONLY",
+      "reason": "Official statewide geology supports county-level research, but mapped occurrence does not establish public entry, mineral ownership, mine/quarry access, roadcut safety or specimen-removal authority.",
+      "public_reason": "Official statewide geology supports county-level research, but mapped occurrence does not establish public entry, mineral ownership, mine/quarry access, roadcut safety or specimen-removal authority.",
+      "primary_blocker": "EXACT_SITE_OWNERSHIP_ACCESS_AND_COLLECTION_AUTHORITY_REQUIRED",
+      "source_url": null,
+      "source_key": "AL124_GSA_MAP",
+      "checked_at": "2026-08-30",
+      "navigation_active": true,
+      "near_me_eligible": false,
+      "coordinate_safe": false,
+      "latitude": null,
+      "longitude": null,
+      "display_mode": "county_context",
+      "safe_to_recommend_now": false
+    },
+    {
+      "record_id": "al::al-county-geology-clay",
+      "state_code": "AL",
+      "entity_name": "Clay County Geology and Mineral Research",
+      "status": "research",
+      "source_bucket": "PUBLISHABLE_RESEARCH_ONLY",
+      "reason": "Official statewide geology supports county-level research, but mapped occurrence does not establish public entry, mineral ownership, mine/quarry access, roadcut safety or specimen-removal authority.",
+      "public_reason": "Official statewide geology supports county-level research, but mapped occurrence does not establish public entry, mineral ownership, mine/quarry access, roadcut safety or specimen-removal authority.",
+      "primary_blocker": "EXACT_SITE_OWNERSHIP_ACCESS_AND_COLLECTION_AUTHORITY_REQUIRED",
+      "source_url": null,
+      "source_key": "AL124_GSA_MAP",
+      "checked_at": "2026-08-30",
+      "navigation_active": true,
+      "near_me_eligible": false,
+      "coordinate_safe": false,
+      "latitude": null,
+      "longitude": null,
+      "display_mode": "county_context",
+      "safe_to_recommend_now": false
+    },
+    {
+      "record_id": "al::cheaha-pinhoti-managed-gem-mine",
+      "state_code": "AL",
+      "entity_name": "Cheaha State Park — Pinhoti Mineral & Gem Mining Co.",
+      "status": "conditional",
+      "source_bucket": "PUBLISHABLE_CONDITIONAL",
+      "reason": "Official park page still advertises the Pinhoti gem mine and take-home bag finds, but displayed store hours are dated 2025. Same-day confirmation that the attraction is operating is required before collect-now recommendation.",
+      "public_reason": "Official park page still advertises the Pinhoti gem mine and take-home bag finds, but displayed store hours are dated 2025. Same-day confirmation that the attraction is operating is required before collect-now recommendation.",
+      "primary_blocker": "CURRENT_2026_OPERATION_HOURS_CONFIRMATION_REQUIRED",
+      "source_url": null,
+      "source_key": "AL124_CHEAHA",
+      "checked_at": "2026-08-30",
+      "navigation_active": true,
+      "near_me_eligible": false,
+      "coordinate_safe": false,
+      "latitude": null,
+      "longitude": null,
+      "display_mode": "public_destination_query",
+      "safe_to_recommend_now": false
+    },
+    {
+      "record_id": "al::al-graphite-mica-pegmatite",
+      "state_code": "AL",
+      "entity_name": "East-Central Alabama Graphite/Mica/Pegmatite Research",
+      "status": "research",
+      "source_bucket": "PUBLISHABLE_RESEARCH_ONLY",
+      "reason": "Authoritative geology/resource evidence supports research value, but exact ownership, access, safety and specimen-removal authority are not established for independent collecting.",
+      "public_reason": "Authoritative geology/resource evidence supports research value, but exact ownership, access, safety and specimen-removal authority are not established for independent collecting.",
+      "primary_blocker": "EXACT_SITE_OWNERSHIP_ACCESS_AND_COLLECTION_AUTHORITY_REQUIRED",
+      "source_url": null,
+      "source_key": "AL124_GSA_MRDS",
+      "checked_at": "2026-08-30",
+      "navigation_active": true,
+      "near_me_eligible": false,
+      "coordinate_safe": false,
+      "latitude": null,
+      "longitude": null,
+      "display_mode": "county_context",
+      "safe_to_recommend_now": false
+    },
+    {
+      "record_id": "al::al-gold-belt-research",
+      "state_code": "AL",
+      "entity_name": "Alabama Gold Belt Research",
+      "status": "research",
+      "source_bucket": "PUBLISHABLE_RESEARCH_ONLY",
+      "reason": "Authoritative geology/resource evidence supports research value, but exact ownership, access, safety and specimen-removal authority are not established for independent collecting.",
+      "public_reason": "Authoritative geology/resource evidence supports research value, but exact ownership, access, safety and specimen-removal authority are not established for independent collecting.",
+      "primary_blocker": "EXACT_SITE_OWNERSHIP_ACCESS_AND_COLLECTION_AUTHORITY_REQUIRED",
+      "source_url": null,
+      "source_key": "AL124_GSA_PUBS",
+      "checked_at": "2026-08-30",
+      "navigation_active": true,
+      "near_me_eligible": false,
+      "coordinate_safe": false,
+      "latitude": null,
+      "longitude": null,
+      "display_mode": "county_context",
+      "safe_to_recommend_now": false
+    },
+    {
+      "record_id": "al::al-county-geology-cleburne",
+      "state_code": "AL",
+      "entity_name": "Cleburne County Geology and Mineral Research",
+      "status": "research",
+      "source_bucket": "PUBLISHABLE_RESEARCH_ONLY",
+      "reason": "Official statewide geology supports county-level research, but mapped occurrence does not establish public entry, mineral ownership, mine/quarry access, roadcut safety or specimen-removal authority.",
+      "public_reason": "Official statewide geology supports county-level research, but mapped occurrence does not establish public entry, mineral ownership, mine/quarry access, roadcut safety or specimen-removal authority.",
+      "primary_blocker": "EXACT_SITE_OWNERSHIP_ACCESS_AND_COLLECTION_AUTHORITY_REQUIRED",
+      "source_url": null,
+      "source_key": "AL124_GSA_MAP",
+      "checked_at": "2026-08-30",
+      "navigation_active": true,
+      "near_me_eligible": false,
+      "coordinate_safe": false,
+      "latitude": null,
+      "longitude": null,
+      "display_mode": "county_context",
+      "safe_to_recommend_now": false
+    },
+    {
+      "record_id": "al::al-county-geology-coffee",
+      "state_code": "AL",
+      "entity_name": "Coffee County Geology and Mineral Research",
+      "status": "research",
+      "source_bucket": "PUBLISHABLE_RESEARCH_ONLY",
+      "reason": "Official statewide geology supports county-level research, but mapped occurrence does not establish public entry, mineral ownership, mine/quarry access, roadcut safety or specimen-removal authority.",
+      "public_reason": "Official statewide geology supports county-level research, but mapped occurrence does not establish public entry, mineral ownership, mine/quarry access, roadcut safety or specimen-removal authority.",
+      "primary_blocker": "EXACT_SITE_OWNERSHIP_ACCESS_AND_COLLECTION_AUTHORITY_REQUIRED",
+      "source_url": null,
+      "source_key": "AL124_GSA_MAP",
+      "checked_at": "2026-08-30",
+      "navigation_active": true,
+      "near_me_eligible": false,
+      "coordinate_safe": false,
+      "latitude": null,
+      "longitude": null,
+      "display_mode": "county_context",
+      "safe_to_recommend_now": false
+    },
+    {
+      "record_id": "al::al-county-geology-colbert",
+      "state_code": "AL",
+      "entity_name": "Colbert County Geology and Mineral Research",
+      "status": "research",
+      "source_bucket": "PUBLISHABLE_RESEARCH_ONLY",
+      "reason": "Official statewide geology supports county-level research, but mapped occurrence does not establish public entry, mineral ownership, mine/quarry access, roadcut safety or specimen-removal authority.",
+      "public_reason": "Official statewide geology supports county-level research, but mapped occurrence does not establish public entry, mineral ownership, mine/quarry access, roadcut safety or specimen-removal authority.",
+      "primary_blocker": "EXACT_SITE_OWNERSHIP_ACCESS_AND_COLLECTION_AUTHORITY_REQUIRED",
+      "source_url": null,
+      "source_key": "AL124_GSA_MAP",
+      "checked_at": "2026-08-30",
+      "navigation_active": true,
+      "near_me_eligible": false,
+      "coordinate_safe": false,
+      "latitude": null,
+      "longitude": null,
+      "display_mode": "county_context",
+      "safe_to_recommend_now": false
+    },
+    {
+      "record_id": "al::al-county-geology-conecuh",
+      "state_code": "AL",
+      "entity_name": "Conecuh County Geology and Mineral Research",
+      "status": "research",
+      "source_bucket": "PUBLISHABLE_RESEARCH_ONLY",
+      "reason": "Official statewide geology supports county-level research, but mapped occurrence does not establish public entry, mineral ownership, mine/quarry access, roadcut safety or specimen-removal authority.",
+      "public_reason": "Official statewide geology supports county-level research, but mapped occurrence does not establish public entry, mineral ownership, mine/quarry access, roadcut safety or specimen-removal authority.",
+      "primary_blocker": "EXACT_SITE_OWNERSHIP_ACCESS_AND_COLLECTION_AUTHORITY_REQUIRED",
+      "source_url": null,
+      "source_key": "AL124_GSA_MAP",
+      "checked_at": "2026-08-30",
+      "navigation_active": true,
+      "near_me_eligible": false,
+      "coordinate_safe": false,
+      "latitude": null,
+      "longitude": null,
+      "display_mode": "county_context",
+      "safe_to_recommend_now": false
+    },
+    {
+      "record_id": "al::al-county-geology-coosa",
+      "state_code": "AL",
+      "entity_name": "Coosa County Geology and Mineral Research",
+      "status": "research",
+      "source_bucket": "PUBLISHABLE_RESEARCH_ONLY",
+      "reason": "Official statewide geology supports county-level research, but mapped occurrence does not establish public entry, mineral ownership, mine/quarry access, roadcut safety or specimen-removal authority.",
+      "public_reason": "Official statewide geology supports county-level research, but mapped occurrence does not establish public entry, mineral ownership, mine/quarry access, roadcut safety or specimen-removal authority.",
+      "primary_blocker": "EXACT_SITE_OWNERSHIP_ACCESS_AND_COLLECTION_AUTHORITY_REQUIRED",
+      "source_url": null,
+      "source_key": "AL124_GSA_MAP",
+      "checked_at": "2026-08-30",
+      "navigation_active": true,
+      "near_me_eligible": false,
+      "coordinate_safe": false,
+      "latitude": null,
+      "longitude": null,
+      "display_mode": "county_context",
+      "safe_to_recommend_now": false
+    }
+  ],
+  "safeRecommendTrueButNotReady": 0,
+  "recommendedExamples": [],
+  "readyWithoutNavigation": 0,
+  "readyWithoutNavigationExamples": [],
+  "staleRechecks": 0,
+  "stateCount": [
+    [
+      "VA",
+      231
+    ],
+    [
+      "KY",
+      218
+    ],
+    [
+      "NC",
+      212
+    ],
+    [
+      "GA",
+      210
+    ],
+    [
+      "TN",
+      199
+    ],
+    [
+      "MO",
+      182
+    ],
+    [
+      "KS",
+      171
+    ],
+    [
+      "IL",
+      168
+    ],
+    [
+      "IA",
+      168
+    ],
+    [
+      "OH",
+      168
+    ],
+    [
+      "NY",
+      166
+    ],
+    [
+      "NE",
+      162
+    ],
+    [
+      "MD",
+      158
+    ],
+    [
+      "IN",
+      154
+    ],
+    [
+      "AR",
+      151
+    ],
+    [
+      "PA",
+      151
+    ],
+    [
+      "OK",
+      144
+    ],
+    [
+      "NJ",
+      143
+    ],
+    [
+      "MN",
+      141
+    ],
+    [
+      "WV",
+      141
+    ],
+    [
+      "SC",
+      139
+    ],
+    [
+      "MI",
+      137
+    ],
+    [
+      "MS",
+      134
+    ],
+    [
+      "TX",
+      130
+    ],
+    [
+      "SD",
+      129
+    ],
+    [
+      "AK",
+      126
+    ],
+    [
+      "WI",
+      126
+    ],
+    [
+      "AL",
+      121
+    ],
+    [
+      "LA",
+      119
+    ],
+    [
+      "DE",
+      114
+    ],
+    [
+      "ND",
+      111
+    ],
+    [
+      "FL",
+      108
+    ],
+    [
+      "NM",
+      106
+    ],
+    [
+      "ME",
+      87
+    ],
+    [
+      "NH",
+      84
+    ],
+    [
+      "MA",
+      83
+    ],
+    [
+      "VT",
+      83
+    ],
+    [
+      "CT",
+      77
+    ],
+    [
+      "CO",
+      70
+    ],
+    [
+      "RI",
+      64
+    ],
+    [
+      "WY",
+      61
+    ],
+    [
+      "HI",
+      59
+    ],
+    [
+      "MT",
+      47
+    ],
+    [
+      "OR",
+      23
+    ],
+    [
+      "WA",
+      22
+    ],
+    [
+      "ID",
+      19
+    ],
+    [
+      "CA",
+      18
+    ],
+    [
+      "NV",
+      17
+    ],
+    [
+      "AZ",
+      9
+    ],
+    [
+      "UT",
+      4
+    ]
+  ],
+  "sourceBucketUniverse": [
+    [
+      "PUBLISHABLE_RESEARCH_ONLY",
+      3870
+    ],
+    [
+      "REFERENCE_OR_POLICY_CONTROL",
+      1085
+    ],
+    [
+      "PROHIBITED_OR_VIEWING_ONLY",
+      447
+    ],
+    [
+      "PUBLISHABLE_CONDITIONAL",
+      197
+    ],
+    [
+      "PUBLISHABLE_READY",
+      156
+    ],
+    [
+      "STATE_COMPLETE_VERIFIED_INVENTORY",
+      19
+    ],
+    [
+      "allowed_with_conditions",
+      14
+    ],
+    [
+      "HOLD_NOINDEX",
+      10
+    ],
+    [
+      "HELD_FOR_MAINTENANCE",
+      9
+    ],
+    [
+      "supporting_access_only",
+      8
+    ],
+    [
+      "PROHIBITED_VIEWING_ONLY",
+      8
+    ],
+    [
+      "STATE_COMPLETE_VERIFIED_MINERAL_RECREATION",
+      4
+    ],
+    [
+      "temporarily_closed",
+      3
+    ],
+    [
+      "PRIVATE_PERMISSION_CONTROLLED_REFERENCE_NOT_PUBLIC_LAND_PIN",
+      3
+    ],
+    [
+      "REFERENCE_CONTROL",
+      3
+    ],
+    [
+      "NOINDEX_LAND_STATUS_UNRESOLVED",
+      2
+    ],
+    [
+      "REFERENCE_ONLY_NOT_COLLECTING_PIN",
+      2
+    ],
+    [
+      "CONDITIONAL_REFERENCE_NOT_CLAIM_CLEARANCE",
+      2
+    ],
+    [
+      "CURRENTLY_CLOSED_REFERENCE_ONLY",
+      2
+    ],
+    [
+      "open_subject_to_current_site_rules",
+      2
+    ],
+    [
+      "allowed",
+      1
+    ],
+    [
+      "not_proven_for_rockhounding",
+      1
+    ],
+    [
+      "PRIVATE_OPERATOR_VERIFY_CURRENT_VISITOR_OPTIONS",
+      1
+    ],
+    [
+      "OFFICIAL_SITE_CLOSED_EARLY_2026",
+      1
+    ],
+    [
+      "HARDER_HOLD_SPECIAL_MANAGEMENT_MINING_NOINDEX",
+      1
+    ],
+    [
+      "STATE_COMPLETE_HOLD_PLSS_FEATURE_IDS_CAPTURED_RIGHTS_ACCESS_UNRESOLVED_NOINDEX",
+      1
+    ],
+    [
+      "HARD_HOLD_NAMED_BLM_DISTRICT_CONTEXT_NOINDEX",
+      1
+    ],
+    [
+      "HOLD_MULTI_MANAGER_PLUS_DYNAMIC_ACCESS_NOINDEX",
+      1
+    ],
+    [
+      "HARDER_HOLD_ACEC_RNA_INTERPRETIVE_RESOURCE_NOINDEX",
+      1
+    ],
+    [
+      "HARDER_HOLD_SPECIAL_MANAGEMENT_PLUS_ACTIVE_TRIP_GATE_NOINDEX",
+      1
+    ],
+    [
+      "HARD_HOLD_PRIVATE_NOINDEX",
+      1
+    ],
+    [
+      "NOINDEX_MINERAL_RIGHTS_UNRESOLVED",
+      1
+    ],
+    [
+      "site_access_for_common_invertebrate_fossil_area",
+      1
+    ],
+    [
+      "NOINDEX_HAZARD_CONTEXT_ONLY",
+      1
+    ],
+    [
+      "RESEARCH_CONDITIONAL_NOT_CLAIM_CLEARANCE",
+      1
+    ],
+    [
+      "GUIDED_CONTROLLED_REFERENCE_NO_INDEPENDENT_MINE_ACCESS",
+      1
+    ],
+    [
+      "CURRENTLY_CLOSED_ROUTE_WAYPOINT_ONLY",
+      1
+    ],
+    [
+      "fee_permission_controlled",
+      1
+    ],
+    [
+      "conditional_claim_overlap",
+      1
+    ]
+  ],
+  "samplesByStatus": {
+    "ready": [
+      {
+        "record_id": "al::rickwood-caverns-managed-gem-mining",
+        "state_code": "AL",
+        "entity_name": "Rickwood Caverns State Park — Managed Gem Mining",
+        "status": "ready",
+        "source_bucket": "PUBLISHABLE_READY",
+        "reason": "Current official park page lists gemstone mining among active park activities. Classification is restricted to the managed attraction and does not authorize collection of natural park or cave material.",
+        "public_reason": "Current official park page lists gemstone mining among active park activities. Classification is restricted to the managed attraction and does not authorize collection of natural park or cave material.",
+        "primary_blocker": "none",
+        "source_url": null,
+        "source_key": "AL124_RICKWOOD",
+        "checked_at": "2026-08-30",
+        "navigation_active": true,
+        "near_me_eligible": true,
+        "coordinate_safe": false,
+        "latitude": null,
+        "longitude": null,
+        "display_mode": "public_destination_query",
+        "safe_to_recommend_now": true
+      },
+      {
+        "record_id": "al::alabama-gold-camp-public-prospecting",
+        "state_code": "AL",
+        "entity_name": "Alabama Gold Camp — Public Prospecting Program",
+        "status": "ready",
+        "source_bucket": "PUBLISHABLE_READY",
+        "reason": "Current operator publishes visitor access and prospecting activities on its private gold-belt property. Permission is limited to the operator program, current activity card, fees, safety rules and method limits.",
+        "public_reason": "Current operator publishes visitor access and prospecting activities on its private gold-belt property. Permission is limited to the operator program, current activity card, fees, safety rules and method limits.",
+        "primary_blocker": "none",
+        "source_url": null,
+        "source_key": "AL124_GOLD_ACT",
+        "checked_at": "2026-08-30",
+        "navigation_active": true,
+        "near_me_eligible": true,
+        "coordinate_safe": false,
+        "latitude": null,
+        "longitude": null,
+        "display_mode": "public_destination_query",
+        "safe_to_recommend_now": true
+      },
+      {
+        "record_id": "al::cathedral-caverns-managed-gem-mine",
+        "state_code": "AL",
+        "entity_name": "Cathedral Caverns State Park — Managed Gem/Fossil Flume",
+        "status": "ready",
+        "source_bucket": "PUBLISHABLE_READY",
+        "reason": "Current official park page sells labeled mining dirt bags/buckets for use in its flumes. This is a managed-material exception only and cannot bleed into collection of natural park rocks, cave formations, fossils or minerals.",
+        "public_reason": "Current official park page sells labeled mining dirt bags/buckets for use in its flumes. This is a managed-material exception only and cannot bleed into collection of natural park rocks, cave formations, fossils or minerals.",
+        "primary_blocker": "none",
+        "source_url": null,
+        "source_key": "AL124_CATHEDRAL",
+        "checked_at": "2026-08-30",
+        "navigation_active": true,
+        "near_me_eligible": true,
+        "coordinate_safe": false,
+        "latitude": null,
+        "longitude": null,
+        "display_mode": "public_destination_query",
+        "safe_to_recommend_now": true
+      },
+      {
+        "record_id": "al::shark-tooth-creek-private-fossil-hunt",
+        "state_code": "AL",
+        "entity_name": "Shark Tooth Creek — Private Guided Fossil Hunt",
+        "status": "ready",
+        "source_bucket": "PUBLISHABLE_READY",
+        "reason": "Current operator publishes a 2026 April-through-October season, appointment-only paid access and transport to the private fossil creek. The authorization applies only to the operator-managed trip footprint and rules.",
+        "public_reason": "Current operator publishes a 2026 April-through-October season, appointment-only paid access and transport to the private fossil creek. The authorization applies only to the operator-managed trip footprint and rules.",
+        "primary_blocker": "none",
+        "source_url": null,
+        "source_key": "AL124_SHARK",
+        "checked_at": "2026-08-30",
+        "navigation_active": true,
+        "near_me_eligible": true,
+        "coordinate_safe": false,
+        "latitude": null,
+        "longitude": null,
+        "display_mode": "public_destination_query",
+        "safe_to_recommend_now": true
+      },
+      {
+        "record_id": "ak::crow-creek-gold-mine",
+        "state_code": "AK",
+        "entity_name": "Crow Creek Gold Mine — Gold Panning",
+        "status": "ready",
+        "source_bucket": "PUBLISHABLE_READY",
+        "reason": "Current operator page offers gold panning without reservation, supplies pans/shovels/buckets and pay dirt, and lists daily operation May 15–September 15; August 30 is inside the operating season.",
+        "public_reason": "Current operator page offers gold panning without reservation, supplies pans/shovels/buckets and pay dirt, and lists daily operation May 15–September 15; August 30 is inside the operating season.",
+        "primary_blocker": "none",
+        "source_url": null,
+        "source_key": "AK142_CROW",
+        "checked_at": "2026-08-30",
+        "navigation_active": true,
+        "near_me_eligible": true,
+        "coordinate_safe": false,
+        "latitude": null,
+        "longitude": null,
+        "display_mode": "public_destination_query",
+        "safe_to_recommend_now": true
+      },
+      {
+        "record_id": "ak::bertha-creek-panning",
+        "state_code": "AK",
+        "entity_name": "Bertha Creek — Recreational Gold Panning Area",
+        "status": "ready",
+        "source_bucket": "PUBLISHABLE_READY",
+        "reason": "Current Forest Service guide defines Bertha Creek as available for recreational panning from its junction with Granite Creek upstream to the powerline crossing; Granite Creek itself is excluded.",
+        "public_reason": "Current Forest Service guide defines Bertha Creek as available for recreational panning from its junction with Granite Creek upstream to the powerline crossing; Granite Creek itself is excluded.",
+        "primary_blocker": "none",
+        "source_url": null,
+        "source_key": "AK142_USFS_PAN",
+        "checked_at": "2026-08-30",
+        "navigation_active": true,
+        "near_me_eligible": true,
+        "coordinate_safe": false,
+        "latitude": null,
+        "longitude": null,
+        "display_mode": "public_destination_query",
+        "safe_to_recommend_now": true
+      },
+      {
+        "record_id": "ak::crescent-creek-panning",
+        "state_code": "AK",
+        "entity_name": "Crescent Creek — Recreational Gold Panning Area",
+        "status": "ready",
+        "source_bucket": "PUBLISHABLE_READY",
+        "reason": "Current Forest Service guide identifies Crescent Creek from the Quartz Creek Road bridge to its junction with Quartz Creek as available for recreational panning; upper claims remain excluded.",
+        "public_reason": "Current Forest Service guide identifies Crescent Creek from the Quartz Creek Road bridge to its junction with Quartz Creek as available for recreational panning; upper claims remain excluded.",
+        "primary_blocker": "none",
+        "source_url": null,
+        "source_key": "AK142_USFS_PAN",
+        "checked_at": "2026-08-30",
+        "navigation_active": true,
+        "near_me_eligible": true,
+        "coordinate_safe": false,
+        "latitude": null,
+        "longitude": null,
+        "display_mode": "public_destination_query",
+        "safe_to_recommend_now": true
+      }
+    ],
+    "conditional": [
+      {
+        "record_id": "al::national-forests-alabama-casual-mineral-collecting",
+        "state_code": "AL",
+        "entity_name": "National Forests in Alabama — Casual Rock/Mineral/Invertebrate Fossil Collecting",
+        "status": "conditional",
+        "source_bucket": "PUBLISHABLE_CONDITIONAL",
+        "reason": "Forest Service guidance and the Alabama forest plan support casual noncommercial mineral collection, but exact NFS parcel, special-area/wilderness status, active claims/private mineral rights, local orders, archaeological protections, fossil type and disturbance method must be checked before a specific trip.",
+        "public_reason": "Forest Service guidance and the Alabama forest plan support casual noncommercial mineral collection, but exact NFS parcel, special-area/wilderness status, active claims/private mineral rights, local orders, archaeological protections, fossil type and disturbance method must be checked before a specific trip.",
+        "primary_blocker": "EXACT_NFS_PARCEL_SPECIAL_AREA_CLAIM_RIGHTS_AND_LOCAL_ORDER_CHECK_REQUIRED",
+        "source_url": null,
+        "source_key": "AL124_USFS_REC",
+        "checked_at": "2026-08-30",
+        "navigation_active": true,
+        "near_me_eligible": false,
+        "coordinate_safe": false,
+        "latitude": null,
+        "longitude": null,
+        "display_mode": "named_place_query",
+        "safe_to_recommend_now": false
+      },
+      {
+        "record_id": "al::almnh-future-fossil-excursions",
+        "state_code": "AL",
+        "entity_name": "Alabama Museum of Natural History — Future Fossil Excursions",
+        "status": "conditional",
+        "source_bucket": "PUBLISHABLE_CONDITIONAL",
+        "reason": "The museum confirms authorized fossil collecting on its guided excursions, but every 2026 date is sold out and waitlists are closed; the 2026 season ended before this audit. A newly published future calendar/registration is required.",
+        "public_reason": "The museum confirms authorized fossil collecting on its guided excursions, but every 2026 date is sold out and waitlists are closed; the 2026 season ended before this audit. A newly published future calendar/registration is required.",
+        "primary_blocker": "NO_CURRENT_BOOKABLE_EXCURSION_DATE",
+        "source_url": null,
+        "source_key": "AL124_ALMNH",
+        "checked_at": "2026-08-30",
+        "navigation_active": true,
+        "near_me_eligible": false,
+        "coordinate_safe": false,
+        "latitude": null,
+        "longitude": null,
+        "display_mode": "named_place_query",
+        "safe_to_recommend_now": false
+      },
+      {
+        "record_id": "al::cheaha-pinhoti-managed-gem-mine",
+        "state_code": "AL",
+        "entity_name": "Cheaha State Park — Pinhoti Mineral & Gem Mining Co.",
+        "status": "conditional",
+        "source_bucket": "PUBLISHABLE_CONDITIONAL",
+        "reason": "Official park page still advertises the Pinhoti gem mine and take-home bag finds, but displayed store hours are dated 2025. Same-day confirmation that the attraction is operating is required before collect-now recommendation.",
+        "public_reason": "Official park page still advertises the Pinhoti gem mine and take-home bag finds, but displayed store hours are dated 2025. Same-day confirmation that the attraction is operating is required before collect-now recommendation.",
+        "primary_blocker": "CURRENT_2026_OPERATION_HOURS_CONFIRMATION_REQUIRED",
+        "source_url": null,
+        "source_key": "AL124_CHEAHA",
+        "checked_at": "2026-08-30",
+        "navigation_active": true,
+        "near_me_eligible": false,
+        "coordinate_safe": false,
+        "latitude": null,
+        "longitude": null,
+        "display_mode": "public_destination_query",
+        "safe_to_recommend_now": false
+      },
+      {
+        "record_id": "al::hidden-rivers-farm-2026-gem-mining",
+        "state_code": "AL",
+        "entity_name": "Hidden Rivers Farm — 2026 Seasonal Gem Mining",
+        "status": "conditional",
+        "source_bucket": "PUBLISHABLE_CONDITIONAL",
+        "reason": "Current operator page lists gem mining for its September 24–October 31, 2026 fall season. On August 30 the program is future-dated, so it cannot be recommended as open now.",
+        "public_reason": "Current operator page lists gem mining for its September 24–October 31, 2026 fall season. On August 30 the program is future-dated, so it cannot be recommended as open now.",
+        "primary_blocker": "PROGRAM_NOT_OPEN_UNTIL_2026_09_24",
+        "source_url": null,
+        "source_key": "AL124_HIDDEN",
+        "checked_at": "2026-08-30",
+        "navigation_active": true,
+        "near_me_eligible": false,
+        "coordinate_safe": false,
+        "latitude": null,
+        "longitude": null,
+        "display_mode": "public_destination_query",
+        "safe_to_recommend_now": false
+      },
+      {
+        "record_id": "al::national-forests-alabama-recreational-gold-prospecting",
+        "state_code": "AL",
+        "entity_name": "National Forests in Alabama — Recreational Gold Prospecting",
+        "status": "conditional",
+        "source_bucket": "PUBLISHABLE_CONDITIONAL",
+        "reason": "Current Forest Service mineral-collecting guidance recognizes recreational gold panning/prospecting as a hobby use, but exact federal mineral ownership, claims, special areas, local district authorization, disturbance level and method remain mandatory trip gates.",
+        "public_reason": "Current Forest Service mineral-collecting guidance recognizes recreational gold panning/prospecting as a hobby use, but exact federal mineral ownership, claims, special areas, local district authorization, disturbance level and method remain mandatory trip gates.",
+        "primary_blocker": "EXACT_NFS_MINERAL_RIGHTS_CLAIM_SPECIAL_AREA_METHOD_AND_DISTRICT_CHECK_REQUIRED",
+        "source_url": null,
+        "source_key": "AL124_USFS_REC",
+        "checked_at": "2026-08-30",
+        "navigation_active": true,
+        "near_me_eligible": false,
+        "coordinate_safe": false,
+        "latitude": null,
+        "longitude": null,
+        "display_mode": "named_place_query",
+        "safe_to_recommend_now": false
+      },
+      {
+        "record_id": "al::minkin-site-aps-authorized-field-trip",
+        "state_code": "AL",
+        "entity_name": "Steven C. Minkin Paleozoic Footprint Site — APS Authorized Field Trip",
+        "status": "conditional",
+        "source_bucket": "PUBLISHABLE_CONDITIONAL",
+        "reason": "The protected site is not standing open access. Current APS material says field trips are permission-based and generally member/guest limited; collection occurs only under current trip authorization and significant specimens are subject to preservation rules.",
+        "public_reason": "The protected site is not standing open access. Current APS material says field trips are permission-based and generally member/guest limited; collection occurs only under current trip authorization and significant specimens are subject to preservation rules.",
+        "primary_blocker": "CURRENT_APS_FIELD_TRIP_AUTHORIZATION_REQUIRED",
+        "source_url": null,
+        "source_key": "AL124_APS_TRIPS",
+        "checked_at": "2026-08-30",
+        "navigation_active": true,
+        "near_me_eligible": false,
+        "coordinate_safe": false,
+        "latitude": null,
+        "longitude": null,
+        "display_mode": "named_place_query",
+        "safe_to_recommend_now": false
+      },
+      {
+        "record_id": "ak::wrangell-st-elias-surface-panning",
+        "state_code": "AK",
+        "entity_name": "Wrangell-St. Elias — Hand Panning / Small-Rock Surface Collection",
+        "status": "conditional",
+        "source_bucket": "PUBLISHABLE_CONDITIONAL",
+        "reason": "NPS allows hand gold panning and small-rock surface collection, but valid mining claims and large private inholdings occur within the park and NPS recommends checking with staff before collecting. Exact public footprint must be resolved.",
+        "public_reason": "NPS allows hand gold panning and small-rock surface collection, but valid mining claims and large private inholdings occur within the park and NPS recommends checking with staff before collecting. Exact public footprint must be resolved.",
+        "primary_blocker": "EXACT_PUBLIC_NPS_FOOTPRINT_AND_CLAIM_STATUS_REQUIRED",
+        "source_url": null,
+        "source_key": "AK142_NPS_WRST",
+        "checked_at": "2026-08-30",
+        "navigation_active": true,
+        "near_me_eligible": false,
+        "coordinate_safe": false,
+        "latitude": null,
+        "longitude": null,
+        "display_mode": "public_destination_query",
+        "safe_to_recommend_now": false
+      }
+    ],
+    "research": [
+      {
+        "record_id": "al::al-county-geology-autauga",
+        "state_code": "AL",
+        "entity_name": "Autauga County Geology and Mineral Research",
+        "status": "research",
+        "source_bucket": "PUBLISHABLE_RESEARCH_ONLY",
+        "reason": "Official statewide geology supports county-level research, but mapped occurrence does not establish public entry, mineral ownership, mine/quarry access, roadcut safety or specimen-removal authority.",
+        "public_reason": "Official statewide geology supports county-level research, but mapped occurrence does not establish public entry, mineral ownership, mine/quarry access, roadcut safety or specimen-removal authority.",
+        "primary_blocker": "EXACT_SITE_OWNERSHIP_ACCESS_AND_COLLECTION_AUTHORITY_REQUIRED",
+        "source_url": null,
+        "source_key": "AL124_GSA_MAP",
+        "checked_at": "2026-08-30",
+        "navigation_active": true,
+        "near_me_eligible": false,
+        "coordinate_safe": false,
+        "latitude": null,
+        "longitude": null,
+        "display_mode": "county_context",
+        "safe_to_recommend_now": false
+      },
+      {
+        "record_id": "al::al-county-geology-baldwin",
+        "state_code": "AL",
+        "entity_name": "Baldwin County Geology and Mineral Research",
+        "status": "research",
+        "source_bucket": "PUBLISHABLE_RESEARCH_ONLY",
+        "reason": "Official statewide geology supports county-level research, but mapped occurrence does not establish public entry, mineral ownership, mine/quarry access, roadcut safety or specimen-removal authority.",
+        "public_reason": "Official statewide geology supports county-level research, but mapped occurrence does not establish public entry, mineral ownership, mine/quarry access, roadcut safety or specimen-removal authority.",
+        "primary_blocker": "EXACT_SITE_OWNERSHIP_ACCESS_AND_COLLECTION_AUTHORITY_REQUIRED",
+        "source_url": null,
+        "source_key": "AL124_GSA_MAP",
+        "checked_at": "2026-08-30",
+        "navigation_active": true,
+        "near_me_eligible": false,
+        "coordinate_safe": false,
+        "latitude": null,
+        "longitude": null,
+        "display_mode": "county_context",
+        "safe_to_recommend_now": false
+      },
+      {
+        "record_id": "al::al-county-geology-barbour",
+        "state_code": "AL",
+        "entity_name": "Barbour County Geology and Mineral Research",
+        "status": "research",
+        "source_bucket": "PUBLISHABLE_RESEARCH_ONLY",
+        "reason": "Official statewide geology supports county-level research, but mapped occurrence does not establish public entry, mineral ownership, mine/quarry access, roadcut safety or specimen-removal authority.",
+        "public_reason": "Official statewide geology supports county-level research, but mapped occurrence does not establish public entry, mineral ownership, mine/quarry access, roadcut safety or specimen-removal authority.",
+        "primary_blocker": "EXACT_SITE_OWNERSHIP_ACCESS_AND_COLLECTION_AUTHORITY_REQUIRED",
+        "source_url": null,
+        "source_key": "AL124_GSA_MAP",
+        "checked_at": "2026-08-30",
+        "navigation_active": true,
+        "near_me_eligible": false,
+        "coordinate_safe": false,
+        "latitude": null,
+        "longitude": null,
+        "display_mode": "county_context",
+        "safe_to_recommend_now": false
+      },
+      {
+        "record_id": "al::al-county-geology-bibb",
+        "state_code": "AL",
+        "entity_name": "Bibb County Geology and Mineral Research",
+        "status": "research",
+        "source_bucket": "PUBLISHABLE_RESEARCH_ONLY",
+        "reason": "Official statewide geology supports county-level research, but mapped occurrence does not establish public entry, mineral ownership, mine/quarry access, roadcut safety or specimen-removal authority.",
+        "public_reason": "Official statewide geology supports county-level research, but mapped occurrence does not establish public entry, mineral ownership, mine/quarry access, roadcut safety or specimen-removal authority.",
+        "primary_blocker": "EXACT_SITE_OWNERSHIP_ACCESS_AND_COLLECTION_AUTHORITY_REQUIRED",
+        "source_url": null,
+        "source_key": "AL124_GSA_MAP",
+        "checked_at": "2026-08-30",
+        "navigation_active": true,
+        "near_me_eligible": false,
+        "coordinate_safe": false,
+        "latitude": null,
+        "longitude": null,
+        "display_mode": "county_context",
+        "safe_to_recommend_now": false
+      },
+      {
+        "record_id": "al::al-county-geology-blount",
+        "state_code": "AL",
+        "entity_name": "Blount County Geology and Mineral Research",
+        "status": "research",
+        "source_bucket": "PUBLISHABLE_RESEARCH_ONLY",
+        "reason": "Official statewide geology supports county-level research, but mapped occurrence does not establish public entry, mineral ownership, mine/quarry access, roadcut safety or specimen-removal authority.",
+        "public_reason": "Official statewide geology supports county-level research, but mapped occurrence does not establish public entry, mineral ownership, mine/quarry access, roadcut safety or specimen-removal authority.",
+        "primary_blocker": "EXACT_SITE_OWNERSHIP_ACCESS_AND_COLLECTION_AUTHORITY_REQUIRED",
+        "source_url": null,
+        "source_key": "AL124_GSA_MAP",
+        "checked_at": "2026-08-30",
+        "navigation_active": true,
+        "near_me_eligible": false,
+        "coordinate_safe": false,
+        "latitude": null,
+        "longitude": null,
+        "display_mode": "county_context",
+        "safe_to_recommend_now": false
+      },
+      {
+        "record_id": "al::al-county-geology-bullock",
+        "state_code": "AL",
+        "entity_name": "Bullock County Geology and Mineral Research",
+        "status": "research",
+        "source_bucket": "PUBLISHABLE_RESEARCH_ONLY",
+        "reason": "Official statewide geology supports county-level research, but mapped occurrence does not establish public entry, mineral ownership, mine/quarry access, roadcut safety or specimen-removal authority.",
+        "public_reason": "Official statewide geology supports county-level research, but mapped occurrence does not establish public entry, mineral ownership, mine/quarry access, roadcut safety or specimen-removal authority.",
+        "primary_blocker": "EXACT_SITE_OWNERSHIP_ACCESS_AND_COLLECTION_AUTHORITY_REQUIRED",
+        "source_url": null,
+        "source_key": "AL124_GSA_MAP",
+        "checked_at": "2026-08-30",
+        "navigation_active": true,
+        "near_me_eligible": false,
+        "coordinate_safe": false,
+        "latitude": null,
+        "longitude": null,
+        "display_mode": "county_context",
+        "safe_to_recommend_now": false
+      },
+      {
+        "record_id": "al::al-county-geology-butler",
+        "state_code": "AL",
+        "entity_name": "Butler County Geology and Mineral Research",
+        "status": "research",
+        "source_bucket": "PUBLISHABLE_RESEARCH_ONLY",
+        "reason": "Official statewide geology supports county-level research, but mapped occurrence does not establish public entry, mineral ownership, mine/quarry access, roadcut safety or specimen-removal authority.",
+        "public_reason": "Official statewide geology supports county-level research, but mapped occurrence does not establish public entry, mineral ownership, mine/quarry access, roadcut safety or specimen-removal authority.",
+        "primary_blocker": "EXACT_SITE_OWNERSHIP_ACCESS_AND_COLLECTION_AUTHORITY_REQUIRED",
+        "source_url": null,
+        "source_key": "AL124_GSA_MAP",
+        "checked_at": "2026-08-30",
+        "navigation_active": true,
+        "near_me_eligible": false,
+        "coordinate_safe": false,
+        "latitude": null,
+        "longitude": null,
+        "display_mode": "county_context",
+        "safe_to_recommend_now": false
+      }
+    ],
+    "protected": [
+      {
+        "record_id": "al::red-mountain-park-geology-viewing-only",
+        "state_code": "AL",
+        "entity_name": "Red Mountain Park — Geological/Mining Heritage Viewing Only",
+        "status": "protected",
+        "source_bucket": "PROHIBITED_OR_VIEWING_ONLY",
+        "reason": "Current park rule prohibits collecting geological/mineralogical objects and prohibits digging/metal detecting except by permit.",
+        "public_reason": "Current park rule prohibits collecting geological/mineralogical objects and prohibits digging/metal detecting except by permit.",
+        "primary_blocker": "PROTECTED_OR_NO_ORDINARY_COLLECTION",
+        "source_url": null,
+        "source_key": "AL124_RED_MTN",
+        "checked_at": "2026-08-30",
+        "navigation_active": true,
+        "near_me_eligible": false,
+        "coordinate_safe": false,
+        "latitude": null,
+        "longitude": null,
+        "display_mode": "named_place_query",
+        "safe_to_recommend_now": false
+      },
+      {
+        "record_id": "al::cathedral-caverns-natural-geology-viewing-only",
+        "state_code": "AL",
+        "entity_name": "Cathedral Caverns — Natural Cave Geology Viewing Only",
+        "status": "protected",
+        "source_bucket": "PROHIBITED_OR_VIEWING_ONLY",
+        "reason": "Natural cave/park geology remains protected even though the park separately operates a purchased-material gem flume.",
+        "public_reason": "Natural cave/park geology remains protected even though the park separately operates a purchased-material gem flume.",
+        "primary_blocker": "PROTECTED_OR_NO_ORDINARY_COLLECTION",
+        "source_url": null,
+        "source_key": "AL124_STATEPARK",
+        "checked_at": "2026-08-30",
+        "navigation_active": true,
+        "near_me_eligible": false,
+        "coordinate_safe": false,
+        "latitude": null,
+        "longitude": null,
+        "display_mode": "named_place_query",
+        "safe_to_recommend_now": false
+      },
+      {
+        "record_id": "al::alabama-state-parks-natural-object-protection",
+        "state_code": "AL",
+        "entity_name": "Alabama State Parks — Natural Geological/ Mineral Collection Prohibited",
+        "status": "protected",
+        "source_bucket": "PROHIBITED_OR_VIEWING_ONLY",
+        "reason": "Current Rule 220-5-.07 prohibits collecting/removing geological and mineralogical objects from Alabama State Parks. Managed purchased gem-flume material is modeled as a separate non-bleeding program.",
+        "public_reason": "Current Rule 220-5-.07 prohibits collecting/removing geological and mineralogical objects from Alabama State Parks. Managed purchased gem-flume material is modeled as a separate non-bleeding program.",
+        "primary_blocker": "PROTECTED_OR_NO_ORDINARY_COLLECTION",
+        "source_url": null,
+        "source_key": "AL124_STATEPARK",
+        "checked_at": "2026-08-30",
+        "navigation_active": true,
+        "near_me_eligible": false,
+        "coordinate_safe": false,
+        "latitude": null,
+        "longitude": null,
+        "display_mode": "named_place_query",
+        "safe_to_recommend_now": false
+      },
+      {
+        "record_id": "al::alabama-wma-public-use-mineral-removal-prohibited",
+        "state_code": "AL",
+        "entity_name": "Covered ADCNR Public-Use Lands — Mineral/Fossil Removal Prohibited",
+        "status": "protected",
+        "source_bucket": "PROHIBITED_OR_VIEWING_ONLY",
+        "reason": "Current Rule 220-4-.15 prohibits damaging or removing minerals, precious metals, dirt, gravel, stones, artifacts and fossils on covered public-use lands.",
+        "public_reason": "Current Rule 220-4-.15 prohibits damaging or removing minerals, precious metals, dirt, gravel, stones, artifacts and fossils on covered public-use lands.",
+        "primary_blocker": "PROTECTED_OR_NO_ORDINARY_COLLECTION",
+        "source_url": null,
+        "source_key": "AL124_WMA",
+        "checked_at": "2026-08-30",
+        "navigation_active": true,
+        "near_me_eligible": false,
+        "coordinate_safe": false,
+        "latitude": null,
+        "longitude": null,
+        "display_mode": "named_place_query",
+        "safe_to_recommend_now": false
+      },
+      {
+        "record_id": "ak::denali-nps-protected",
+        "state_code": "AK",
+        "entity_name": "Denali National Park and Preserve — Rock/Mineral Collection Protected",
+        "status": "protected",
+        "source_bucket": "PROHIBITED_OR_VIEWING_ONLY",
+        "reason": "Current NPS legal guidance lists Denali among Alaska units excluded from the Alaska surface rock/mineral collection exception; fossils are also protected.",
+        "public_reason": "Current NPS legal guidance lists Denali among Alaska units excluded from the Alaska surface rock/mineral collection exception; fossils are also protected.",
+        "primary_blocker": "NPS_COLLECTION_EXCEPTION_NOT_APPLICABLE",
+        "source_url": null,
+        "source_key": "AK142_NPS_LEGAL",
+        "checked_at": "2026-08-30",
+        "navigation_active": true,
+        "near_me_eligible": false,
+        "coordinate_safe": false,
+        "latitude": null,
+        "longitude": null,
+        "display_mode": "public_destination_query",
+        "safe_to_recommend_now": false
+      },
+      {
+        "record_id": "ak::katmai-protected",
+        "state_code": "AK",
+        "entity_name": "Katmai National Park and Preserve — Collection Protected",
+        "status": "protected",
+        "source_bucket": "PROHIBITED_OR_VIEWING_ONLY",
+        "reason": "Current NPS legal guidance lists Katmai among Alaska units excluded from the Alaska surface rock/mineral collection exception.",
+        "public_reason": "Current NPS legal guidance lists Katmai among Alaska units excluded from the Alaska surface rock/mineral collection exception.",
+        "primary_blocker": "NPS_COLLECTION_EXCEPTION_NOT_APPLICABLE",
+        "source_url": null,
+        "source_key": "AK142_NPS_LEGAL",
+        "checked_at": "2026-08-30",
+        "navigation_active": true,
+        "near_me_eligible": false,
+        "coordinate_safe": false,
+        "latitude": null,
+        "longitude": null,
+        "display_mode": "public_destination_query",
+        "safe_to_recommend_now": false
+      },
+      {
+        "record_id": "ak::sitka-nhp-protected",
+        "state_code": "AK",
+        "entity_name": "Sitka National Historical Park — Collection Protected",
+        "status": "protected",
+        "source_bucket": "PROHIBITED_OR_VIEWING_ONLY",
+        "reason": "Sitka NHP is explicitly excluded from the Alaska surface rock/mineral collection exception; natural and cultural resources remain protected.",
+        "public_reason": "Sitka NHP is explicitly excluded from the Alaska surface rock/mineral collection exception; natural and cultural resources remain protected.",
+        "primary_blocker": "NPS_COLLECTION_EXCEPTION_NOT_APPLICABLE",
+        "source_url": null,
+        "source_key": "AK142_NPS_LEGAL",
+        "checked_at": "2026-08-30",
+        "navigation_active": true,
+        "near_me_eligible": false,
+        "coordinate_safe": false,
+        "latitude": null,
+        "longitude": null,
+        "display_mode": "public_destination_query",
+        "safe_to_recommend_now": false
+      }
+    ]
+  }
+}
