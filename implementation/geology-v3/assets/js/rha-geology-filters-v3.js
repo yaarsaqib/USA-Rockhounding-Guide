@@ -4,8 +4,8 @@
 const AGE=[['all','All ages'],['precambrian','Precambrian'],['paleozoic','Paleozoic'],['mesozoic','Mesozoic'],['cenozoic','Cenozoic'],['unknown','Unclassified']];
 const ROCK=[['all','All rock types'],['sedimentary','Sedimentary'],['igneous','Igneous'],['metamorphic','Metamorphic'],['surficial','Unconsolidated'],['unknown','Unclassified']];
 const ERAS={
- precambrian:/hadean|archaean|archean|proterozoic|ediacaran|cryogenian|tonian/i,
- paleozoic:/paleozoic|cambrian|ordovician|silurian|devonian|carboniferous|mississippian|pennsylvanian|permian|kasimovian|gzhelian|moscovian|bashkirian|serpukhovian|visean|tournaisian/i,
+ precambrian:/\b(?:precambrian|hadean|archaean|archean|proterozoic|neoproterozoic|mesoproterozoic|paleoproterozoic|ediacaran|cryogenian|tonian)\b/i,
+ paleozoic:/\b(?:paleozoic|cambrian|ordovician|silurian|devonian|carboniferous|mississippian|pennsylvanian|permian|kasimovian|gzhelian|moscovian|bashkirian|serpukhovian|visean|tournaisian)\b/i,
  mesozoic:/mesozoic|triassic|jurassic|cretaceous|campanian|maastrichtian|cenomanian|turonian|albian|aptian|berriasian|tithonian|kimmeridgian/i,
  cenozoic:/cenozoic|paleogene|palaeogene|neogene|quaternary|paleocene|eocene|oligocene|miocene|pliocene|pleistocene|holocene|burdigalian|aquitanian|tortonian|langhian|danian|rupelian|zanclean|gelasian/i
 };
