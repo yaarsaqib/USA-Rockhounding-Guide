@@ -86,3 +86,9 @@ body.page-id-11580 .usarh-gear-app #practical-buying-guide{scroll-margin-top:88p
  body.page-id-11580 .usarh-gear-app .usarh-shop-card img.usarh-product-photo{height:155px!important}
  body.page-id-11580 .usarh-gear-app .rha-gear-comparison-details > summary{font-size:14px}
 }
+/* Final visual QA: unified buying controls, compact 5-step hero journey. */
+body.page-id-11580 .usarh-gear-app .usarh-journey{display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:4px!important;align-items:stretch!important;min-width:0!important;background:transparent!important}
+body.page-id-11580 .usarh-gear-app .usarh-journey b{display:none!important}
+body.page-id-11580 .usarh-gear-app .usarh-journey span{display:flex;align-items:center;justify-content:center;padding:7px 2px!important;white-space:nowrap!important;font-size:10px!important;min-width:0}
+body.page-id-11580 .usarh-gear-app .usarh-shop-card a.usarh-btn--merchant{background:#17664f!important;border-color:#17664f!important;color:#fff!important}
+body.page-id-11580 .usarh-gear-app .usarh-shop-card a.usarh-btn--merchant:hover{background:#114e3e!important;border-color:#114e3e!important}
