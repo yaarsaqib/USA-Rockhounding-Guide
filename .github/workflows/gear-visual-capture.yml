@@ -5,6 +5,7 @@ on:
     branches: [fix/gear-visual-structure-20261017]
     paths:
       - 'tools/gear-visual-capture.cjs'
+      - 'tests/gear-visual-layout.spec.cjs'
       - '.github/workflows/gear-visual-capture.yml'
 permissions:
   contents: write
@@ -19,6 +20,7 @@ jobs:
           node-version: '22'
       - run: npm install --no-audit --no-fund
       - run: npx playwright install --with-deps chromium
+      - run: npx playwright test tests/gear-visual-layout.spec.cjs --config=playwright.config.cjs
       - run: node tools/gear-visual-capture.cjs
 
       - name: Archive rendered screenshots in visual QA branch
