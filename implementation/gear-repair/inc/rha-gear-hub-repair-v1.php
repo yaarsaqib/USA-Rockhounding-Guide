@@ -9,7 +9,7 @@ add_action('wp_enqueue_scripts', function () {
     if (!is_page(11580)) return;
     $uri = get_stylesheet_directory_uri();
     wp_enqueue_style('rha-gear-hub-repair', $uri . '/assets/css/rha-gear-hub-repair-v1.css', array(), '1.0.0');
-    wp_enqueue_script('rha-gear-hub-repair', $uri . '/assets/js/rha-gear-hub-repair-v1.js', array(), '1.1.0', true);
+    wp_enqueue_script('rha-gear-hub-repair', $uri . '/assets/js/rha-gear-hub-repair-v1.js', array(), '1.2.0', true);
 }, 999);
 
 function rha_gear_fix_output($output) {
