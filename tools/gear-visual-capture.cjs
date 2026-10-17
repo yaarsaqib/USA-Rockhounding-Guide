@@ -9,6 +9,28 @@ const {chromium}=require('playwright');
   page.on('pageerror',e=>console.log('RHA_PAGE_ERROR '+device.name+' '+e.message.slice(0,250)));
   await page.goto('https://usarockhounding.com/gear/',{waitUntil:'domcontentloaded',timeout:45000});
   await page.waitForTimeout(1200);
+
+  console.log('RHA_TOP_DIAG '+device.name+' '+JSON.stringify(await page.evaluate(()=>{
+    const sels=['header','#main','.rha-page-heading','.entry-content','.usarh-gear-app','.usarh-breadcrumbs'];
+    return sels.map(sel=>{
+      const el=document.querySelector(sel);if(!el)return {sel,missing:true};
+      const r=el.getBoundingClientRect(),c=getComputedStyle(el);
+      return {sel,top:Math.round(r.top+scrollY),height:Math.round(r.height),
+        paddingTop:c.paddingTop,marginTop:c.marginTop,minHeight:c.minHeight,
+        visibility:c.visibility,display:c.display,position:c.position};
+    });
+  })));
+  const imgCheck=page.locator('.usarh-shop-card img.usarh-product-photo').first();
+  await imgCheck.scrollIntoViewIfNeeded();
+  await page.waitForTimeout(2500);
+  console.log('RHA_IMAGE_DIAG '+device.name+' '+JSON.stringify(await page.evaluate(()=>{
+    return [...document.querySelectorAll('.usarh-shop-card img.usarh-product-photo')].slice(0,9).map(n=>({
+      alt:n.alt,complete:n.complete,naturalWidth:n.naturalWidth,
+      loading:n.loading,src:n.currentSrc||n.src,
+      rect:n.getBoundingClientRect().toJSON()
+    }));
+  })));
+  await page.evaluate(()=>window.scrollTo(0,0));
   const result=await page.evaluate(()=>{
     const app=document.querySelector('.usarh-gear-app');
     const entries=['.usarh-hero','.usarh-answer','#practical-buying-guide','.usarh-toc',
