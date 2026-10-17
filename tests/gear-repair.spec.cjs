@@ -1,6 +1,6 @@
 const {test,expect}=require('@playwright/test');
 for (const device of ['desktop','mobile']) {
- test(device+' Gear Hub catalog, product photography and navigation',async({page})=>{
+ test(device+' Gear Hub catalog, product photography and navigation',async({page},testInfo)=>{
    const jsErrors=[];page.on('pageerror',e=>jsErrors.push(e.message));
    await page.goto('/gear/',{waitUntil:'domcontentloaded'});
    const app=page.locator('.usarh-gear-app');
@@ -33,7 +33,7 @@ for (const device of ['desktop','mobile']) {
      return {gridColumns:getComputedStyle(grid).gridTemplateColumns.split(' ').length,bodyScroll:document.documentElement.scrollWidth,width:innerWidth,appWidth:app.getBoundingClientRect().width};
    });
    expect(props.bodyScroll).toBeLessThanOrEqual(props.width+10);
-   if(device==='mobile')expect(props.gridColumns).toBe(1);
+   if(testInfo.project.name==='mobile')expect(props.gridColumns).toBe(1);
    expect(jsErrors).toEqual([]);
  });
 }
