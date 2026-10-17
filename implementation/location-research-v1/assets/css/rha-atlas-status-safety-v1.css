@@ -1,0 +1,6 @@
+#rh-app .rha-status-meaning{font-size:12px;line-height:1.45;color:#344f47;background:#ecf3ed;border-left:3px solid #366950;padding:8px 12px;width:100%;box-sizing:border-box;max-width:100%}
+#rh-app .rha-status-disclaimer{font:650 12px/1.45 system-ui,sans-serif;color:#774e24!important;background:#fff4dd;border:1px solid #e4c999;padding:6px 9px;border-radius:6px}
+#rh-app #mapPopup:has(.rh-popup-status .badge.research) .rh-popup-actions,
+#rh-app #mapPopup:has(.rh-popup-status .badge.research) [data-plot],
+#rh-app .rh-card:has(.badge.research) .rh-actions a,
+#rh-app .rh-card:has(.badge.research) .rh-actions [data-plot]{display:none!important}

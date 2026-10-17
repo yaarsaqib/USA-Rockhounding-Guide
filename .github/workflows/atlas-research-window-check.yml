@@ -1,0 +1,22 @@
+name: USA atlas evidence and USGS viewport regression
+on:
+  workflow_dispatch:
+  push:
+    branches: [audit/location-status-and-100k-source-20261017]
+    paths:
+      - 'tests/atlas-research-window.spec.cjs'
+      - '.github/workflows/atlas-research-window-check.yml'
+permissions:
+  contents: read
+jobs:
+  atlas:
+    runs-on: ubuntu-latest
+    timeout-minutes: 17
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --no-audit --no-fund
+      - run: npx playwright install --with-deps chromium
+      - run: npx playwright test tests/atlas-research-window.spec.cjs --config=playwright.config.cjs
