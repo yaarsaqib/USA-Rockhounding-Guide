@@ -48,3 +48,15 @@ test('ready totals and research definitions remain distinct',async({page})=>{
  await expect(page.locator('.rh-safety')).toContainText('Research');
  await expect(page.locator('script[src*="map_bundle.js"]')).toHaveCount(1);
 });
+
+
+test('county geology research records never present directions as collecting destinations',async({page})=>{
+ await page.goto('/rockhounding-map/',{waitUntil:'domcontentloaded'});
+ await page.getByPlaceholder('agate, fossil, gold, mine, beach…').fill('Autauga County Geology');
+ const target=page.locator('#resultList .rh-card').filter({hasText:'Autauga County Geology'}).first();
+ await expect(target).toBeVisible();
+ await expect(target.locator('.badge.research')).toBeVisible();
+ await expect(target.locator('.rha-status-disclaimer')).toContainText('collecting access unverified');
+ await expect(target.locator('.rh-actions a')).toHaveCount(0);
+ await expect(page.locator('.rha-status-meaning')).toContainText('Research');
+});
