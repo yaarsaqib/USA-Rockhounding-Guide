@@ -1,14 +1,22 @@
-name: Geology map browser checks
+name: Geological Intelligence browser regression
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - feature/geological-intelligence-v1
+    paths:
+      - 'tests/geology-map.spec.cjs'
+      - 'playwright.config.cjs'
+      - 'implementation/geology-*/**'
+      - '.github/workflows/geology-map-check.yml'
 
 permissions:
   contents: read
 
 jobs:
-  smoke:
+  geology-smoke:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -17,3 +25,10 @@ jobs:
       - run: npm install --no-audit --no-fund
       - run: npx playwright install --with-deps chromium
       - run: npm run test:geology
+      - name: Save browser failures
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: geology-browser-failures
+          path: test-results/
+          if-no-files-found: ignore
