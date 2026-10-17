@@ -29,7 +29,7 @@ add_action('wp_enqueue_scripts', function () {
     wp_register_script(
         'rha-geology-guide-v2',
         get_stylesheet_directory_uri() . '/assets/js/rha-geology-guide-v2.js',
-        array_keys($leaflets), '2.0.0', true
+        array_keys($leaflets), '2.1.0', true
     );
     wp_add_inline_script(
         'rha-geology-guide-v2',
