@@ -1,0 +1,29 @@
+name: Geological vector tile preflight
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - feature/geological-vector-v4
+    paths:
+      - 'tests/geology-vector-preflight.spec.cjs'
+      - '.github/workflows/geology-vector-preflight.yml'
+permissions:
+  contents: read
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --no-audit --no-fund
+      - run: npx playwright install --with-deps chromium
+      - run: npx playwright test tests/geology-vector-preflight.spec.cjs --config=playwright.config.cjs --project=desktop-chromium
+      - if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: geology-vector-preflight-failures
+          path: test-results/
+          if-no-files-found: ignore
