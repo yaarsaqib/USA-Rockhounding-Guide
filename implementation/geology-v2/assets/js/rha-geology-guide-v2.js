@@ -102,9 +102,12 @@
           line(card,'Unit',unit.name||unit.unit_name||unit.strat_name);
           line(card,'Age',unit.t_int_name||unit.age);
           line(card,'Older interval',unit.b_int_name);
+          line(card,'Youngest age (Ma)',unit.best_t_age??unit.best_age_top);
+          line(card,'Oldest age (Ma)',unit.best_b_age??unit.best_age_bottom);
           line(card,'Lithology',unit.lith||unit.liths);
           line(card,'Description',unit.descrip);
           line(card,'Source',unit.source);
+          line(card,'Source ID',unit.source_id);
           line(card,'Map ID',unit.map_id);
           result.appendChild(card);
         });
