@@ -53,8 +53,8 @@ function init(){
  empty.textContent='No products match this search and category. Change the search or select All categories.';
  results.insertAdjacentElement('afterend',empty);
 
- let limit=18,queued=false;
- const chunk=18;
+ const chunk=window.matchMedia('(max-width: 640px)').matches?6:9;
+ let limit=chunk,queued=false;
  function eligible(card) {
   // Existing plugin search/category behavior owns the hidden property.
   return !card.hidden && card.getAttribute('aria-hidden')!=='true' && card.style.display!=='none';
@@ -65,7 +65,11 @@ function init(){
   for(const card of cards){
    const show=eligible(card)&&displayed<limit;
    card.classList.toggle('rha-gear-page-hidden',!show);
-   if(show)displayed++;
+   if(show){
+    displayed++;
+    const image=card.querySelector('img.usarh-product-photo');
+    if(image){image.loading='eager';if(displayed<=3)image.fetchPriority='high';}
+   }
   }
   results.textContent=matching.length
    ? 'Showing '+displayed+' of '+matching.length+' matching products ('+cards.length+' in catalog).'
