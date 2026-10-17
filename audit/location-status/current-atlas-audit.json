@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-17T14:52:18.052Z",
+  "date": "2026-10-17T14:55:56.235Z",
   "bundleBytes": 21998494,
   "bundleKeys": [
     "records",
@@ -1738,5 +1738,136 @@
         "safe_to_recommend_now": false
       }
     ]
-  }
+  },
+  "blmNamedMatches": [
+    {
+      "name": "Black Hills Rockhound Area",
+      "state": "AZ",
+      "matches": [
+        {
+          "record_id": "az::black-hills-rockhound-area-arizona",
+          "state_code": "AZ",
+          "entity_name": "Black Hills Rockhound Area",
+          "status": "ready",
+          "source_bucket": "allowed",
+          "reason": "BATCH33: Current BLM site-specific page explicitly says public digging is allowed without fees/permits; evergreen site page is publishable. Dynamic restrictions and staying within the designated area still apply. BATCH34 MAP FINAL: BLM-published 32.87397,-109.39496 is an allowed collection-site pin; stay within the designated rockhound area.",
+          "public_reason": "Current evidence supports the mapped location context described by this record. This point may belong to a broader collection area or parent location, so use the stated status, manager information and current site rules rather than treating the marker alone as a separate collecting authorization.",
+          "primary_blocker": "",
+          "source_url": null,
+          "source_key": "BLM_BLACK_HILLS_RHA",
+          "checked_at": "2026-08-14",
+          "navigation_active": true,
+          "near_me_eligible": true,
+          "coordinate_safe": true,
+          "latitude": 32.87397,
+          "longitude": -109.39496,
+          "display_mode": "exact_marker",
+          "safe_to_recommend_now": true
+        }
+      ]
+    },
+    {
+      "name": "Round Mountain Rockhound Area",
+      "state": "AZ",
+      "matches": [
+        {
+          "record_id": "az::round-mountain-rockhound-area-arizona",
+          "state_code": "AZ",
+          "entity_name": "Round Mountain Rockhound Area",
+          "status": "conditional",
+          "source_bucket": "allowed_with_conditions",
+          "reason": "BATCH33: Current BLM page identifies a designated rockhounding area with no fee; publishable as a designated-site page. The current page does not name a specific mineral target, so none is invented. BATCH34 MAP FINAL: use the validated federal recreation/designated-site coordinate and current BLM directions; do not invent a mineral target.",
+          "public_reason": "Current evidence supports the mapped location context described by this record. This point may belong to a broader collection area or parent location, so use the stated status, manager information and current site rules rather than treating the marker alone as a separate collecting authorization.",
+          "primary_blocker": "",
+          "source_url": null,
+          "source_key": "RECGOV_ROUND_MOUNTAIN",
+          "checked_at": "2026-08-14",
+          "navigation_active": true,
+          "near_me_eligible": false,
+          "coordinate_safe": true,
+          "latitude": 32.4847167,
+          "longitude": -109.0595,
+          "display_mode": "exact_marker",
+          "safe_to_recommend_now": false
+        }
+      ]
+    },
+    {
+      "name": "Wiley Well Geode Beds",
+      "state": "CA",
+      "matches": []
+    },
+    {
+      "name": "Chambless Rock Collecting Area",
+      "state": "CA",
+      "matches": []
+    },
+    {
+      "name": "Savahia Peak Rock Collecting Area",
+      "state": "CA",
+      "matches": []
+    },
+    {
+      "name": "Garnet Hill",
+      "state": "NV",
+      "matches": []
+    },
+    {
+      "name": "Sunstone Collection Area",
+      "state": "OR",
+      "matches": [
+        {
+          "record_id": "or::oregon-sunstone-public-collection-area",
+          "state_code": "OR",
+          "entity_name": "Oregon Sunstone Public Collection Area",
+          "status": "ready",
+          "source_bucket": "STATE_COMPLETE_VERIFIED_INVENTORY",
+          "reason": "Retained in Oregon completion inventory; check current closures, fire restrictions, tides/roads and site-specific notices immediately before travel.",
+          "public_reason": "Current evidence supports the mapped location context described by this record. This point may belong to a broader collection area or parent location, so use the stated status, manager information and current site rules rather than treating the marker alone as a separate collecting authorization.",
+          "primary_blocker": "live_trip_gate_required",
+          "source_url": null,
+          "source_key": "OR75",
+          "checked_at": "2026-08-18",
+          "navigation_active": true,
+          "near_me_eligible": false,
+          "coordinate_safe": false,
+          "latitude": null,
+          "longitude": null,
+          "display_mode": "named_place_query",
+          "safe_to_recommend_now": true
+        }
+      ]
+    },
+    {
+      "name": "Dugway Geode Beds",
+      "state": "UT",
+      "matches": [
+        {
+          "record_id": "ut::dugway-geode-beds-utah",
+          "state_code": "UT",
+          "entity_name": "Dugway Geode Beds",
+          "status": "ready",
+          "source_bucket": "open_subject_to_current_site_rules",
+          "reason": "UTM 12S 0317569 4416919 converted to WGS84; reference within current BLM-designated beds, not a parcel/legal-boundary substitute.",
+          "public_reason": "UTM 12S 0317569 4416919 converted to WGS84; reference within current BLM-designated beds, not a parcel/legal-boundary substitute.",
+          "primary_blocker": "",
+          "source_url": null,
+          "source_key": "UT55_UGS_DUGWAY + UT55_BLM_DUGWAY",
+          "checked_at": "2026-08-15",
+          "navigation_active": true,
+          "near_me_eligible": true,
+          "coordinate_safe": true,
+          "latitude": 39.8827211591,
+          "longitude": -113.133468694,
+          "display_mode": "exact_marker",
+          "safe_to_recommend_now": true
+        }
+      ]
+    },
+    {
+      "name": "Topaz Mountain Rockhound Recreation Area",
+      "state": "UT",
+      "matches": []
+    }
+  ]
 }
