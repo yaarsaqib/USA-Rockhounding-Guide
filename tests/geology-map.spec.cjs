@@ -75,7 +75,8 @@ test('guide filters actual inspected units and reveals original source citation'
     status:200,contentType:'application/json',
     body:JSON.stringify({source:'Macrostrat',units:[
       {name:'Example sandstone',t_int_name:'Eocene',lith:'sandstone',source_id:'133',map_id:'1001'},
-      {name:'Example basalt',t_int_name:'Jurassic',lith:'basalt',source_id:'7',map_id:'1002'}
+      {name:'Example basalt',t_int_name:'Jurassic',lith:'basalt',source_id:'7',map_id:'1002'},
+      {name:'Example gneiss',t_int_name:'Precambrian',lith:'gneiss',source_id:'25',map_id:'1003'}
     ],note:'Geological context only. Not collecting permission.'})
   }));
   await page.route('**/wp-json/rha-geology/v1/source?**',route=>route.fulfill({
@@ -87,9 +88,13 @@ test('guide filters actual inspected units and reveals original source citation'
   const panel=page.locator('.rha-geology-guide-panel');
   await panel.getByRole('button',{name:'Geology at guide point'}).click();
   const units=panel.locator('.rha-geo-guide-unit');
-  await expect(units).toHaveCount(2);
+  await expect(units).toHaveCount(3);
   const era=panel.getByRole('combobox',{name:'Geological era filter for inspected rock units'});
   const type=panel.getByRole('combobox',{name:'Rock type filter for inspected rock units'});
+  await era.selectOption('precambrian');
+  await expect(panel.locator('.rha-geo-guide-unit:visible')).toHaveCount(1);
+  await era.selectOption('paleozoic');
+  await expect(panel.locator('.rha-geo-guide-unit:visible')).toHaveCount(0);
   await era.selectOption('cenozoic');
   await expect(panel.locator('.rha-geo-guide-unit:visible')).toHaveCount(1);
   await type.selectOption('igneous');
