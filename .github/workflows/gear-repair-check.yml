@@ -1,0 +1,30 @@
+name: Gear Hub browser quality checks
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - fix/gear-hub-repair-20261017
+    paths:
+      - 'tests/gear-repair.spec.cjs'
+      - 'playwright.gear.config.cjs'
+      - '.github/workflows/gear-repair-check.yml'
+permissions:
+  contents: read
+jobs:
+  gear:
+    runs-on: ubuntu-latest
+    timeout-minutes: 16
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --no-audit --no-fund
+      - run: npx playwright install --with-deps chromium
+      - run: npx playwright test --config=playwright.gear.config.cjs
+      - if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gear-hub-browser-failures
+          path: test-results/
+          if-no-files-found: ignore
