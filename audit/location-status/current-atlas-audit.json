@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-17T15:08:34.943Z",
+  "date": "2026-10-17T15:11:22.260Z",
   "bundleBytes": 21998494,
   "bundleKeys": [
     "records",
@@ -1738,6 +1738,36 @@
         "safe_to_recommend_now": false
       }
     ]
+  },
+  "fullDisplayedInventory": {
+    "total": 15520,
+    "core": 5865,
+    "siteSupplement": 7,
+    "usgsSupplement": 11000,
+    "addedAfterDeduplication": 9655,
+    "byStatus": [
+      [
+        "research",
+        13574
+      ],
+      [
+        "policy",
+        1085
+      ],
+      [
+        "protected",
+        458
+      ],
+      [
+        "conditional",
+        214
+      ],
+      [
+        "ready",
+        189
+      ]
+    ],
+    "sourceNotes": "USGS MRDS means research only; none is a verified public collecting destination."
   },
   "blmNamedMatches": [
     {
