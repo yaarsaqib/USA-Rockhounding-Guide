@@ -1,0 +1,12 @@
+/* USGS research layer clearly distinct from verified collecting statuses */
+#rh-app .rh-layerbar [data-usgs-research="toggle"]{border:1px solid #a9773d;background:#fff3dc;color:#63401e;font-weight:750}
+#rh-app .rh-layerbar [data-usgs-research="toggle"].is-active{background:#8e622f;color:#fff}
+#rh-app .rha-usgs-research-v1{box-sizing:border-box;margin:10px 0 0;padding:14px 18px;background:#fff8eb;border:1px solid #c9aa76;border-radius:10px;color:#42321f;line-height:1.5;max-width:100%;font-size:13px}
+#rh-app .rha-usgs-research-v1[hidden]{display:none!important}
+#rh-app .rha-usgs-research-v1 strong{display:block;font-size:15px}
+#rh-app .rha-usgs-research-v1 p{margin:7px 0;color:#624a2e}
+#rh-app .rha-usgs-research-v1 .rha-usgs-v1-status{padding:8px;background:#fff;border:1px solid #e2d4bb;border-radius:6px}
+#rh-app .rha-usgs-research-v1 button{border:1px solid #936432;background:#fff;color:#6c4825;border-radius:6px;padding:7px 12px;font-weight:750;cursor:pointer}
+.rha-usgs-v1-popup{max-width:250px;line-height:1.4}
+.rha-usgs-v1-popup p{margin:6px 0}
+@media(max-width:650px){#rh-app .rha-usgs-research-v1{padding:10px 12px;font-size:12px}}
