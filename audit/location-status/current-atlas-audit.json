@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-17T15:11:22.260Z",
+  "date": "2026-10-17T15:12:57.042Z",
   "bundleBytes": 21998494,
   "bundleKeys": [
     "records",
@@ -1740,15 +1740,15 @@
     ]
   },
   "fullDisplayedInventory": {
-    "total": 15520,
+    "total": 16872,
     "core": 5865,
     "siteSupplement": 7,
     "usgsSupplement": 11000,
-    "addedAfterDeduplication": 9655,
+    "addedAfterDeduplication": 11007,
     "byStatus": [
       [
         "research",
-        13574
+        14926
       ],
       [
         "policy",
