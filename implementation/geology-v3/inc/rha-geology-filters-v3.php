@@ -42,6 +42,6 @@ add_action('wp_enqueue_scripts',function(){
  if(!$on_map&&!$on_guide)return;
  $root=get_stylesheet_directory_uri();
  wp_enqueue_style('rha-geology-filters-v3',$root.'/assets/css/rha-geology-filters-v3.css',array(),'3.0.0');
- wp_enqueue_script('rha-geology-filters-v3',$root.'/assets/js/rha-geology-filters-v3.js',array(),'3.0.0',true);
+ wp_enqueue_script('rha-geology-filters-v3',$root.'/assets/js/rha-geology-filters-v3.js',array(),'3.0.1',true);
  wp_add_inline_script('rha-geology-filters-v3','window.RHA_GEOLOGY_SOURCE_ENDPOINT='.wp_json_encode(rest_url('rha-geology/v1/source')).';','before');
 },1200);
