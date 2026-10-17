@@ -1,0 +1,22 @@
+name: Gear visual structure capture
+on:
+  workflow_dispatch:
+  push:
+    branches: [fix/gear-visual-structure-20261017]
+    paths:
+      - 'tools/gear-visual-capture.cjs'
+      - '.github/workflows/gear-visual-capture.yml'
+permissions:
+  contents: read
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --no-audit --no-fund
+      - run: npx playwright install --with-deps chromium
+      - run: node tools/gear-visual-capture.cjs
