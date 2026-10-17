@@ -67,3 +67,35 @@ test('all 128 Gear Hub product image URLs return real image files',async({page,r
   if(problems.length)console.log('PRODUCT IMAGE ERRORS:',JSON.stringify(problems));
   expect(problems).toEqual([]);
 });
+
+
+test('Gear Finder produces a customized result instead of leaving its initial placeholder',async({page})=>{
+ await page.goto('/gear/',{waitUntil:'domcontentloaded'});
+ const form=page.locator('form[data-gear-finder]');
+ await expect(form).toBeVisible();
+ await form.locator('select[name="activity"]').selectOption('tumble');
+ await form.locator('select[name="material"]').selectOption('agate');
+ await form.locator('select[name="size"]').selectOption('small');
+ await form.locator('select[name="budget"]').selectOption('500');
+ await form.getByRole('button',{name:'Build my equipment path'}).click();
+ const result=page.locator('[data-gear-result]');
+ await expect(result).not.toContainText('Start with the job—not the product.');
+ await expect(result).toContainText(/tumb|polish|rotary/i);
+});
+test('Gear page internal guides do not point to 404 destinations',async({page,request})=>{
+ await page.goto('/gear/',{waitUntil:'domcontentloaded'});
+ const links=await page.locator('.usarh-gear-app a[href]').evaluateAll(a=>
+  [...new Set(a.map(x=>x.href).filter(u=>u.startsWith(location.origin+'/')&&!u.includes('#')))]
+ );
+ const bad=[];
+ for(let i=0;i<links.length;i+=8){
+  await Promise.all(links.slice(i,i+8).map(async u=>{
+   try{
+    const r=await request.get(u,{timeout:16000});
+    if(r.status()>=400)bad.push({url:u,status:r.status()});
+   }catch(e){bad.push({url:u,error:String(e).slice(0,160)});}
+  }));
+ }
+ if(bad.length)console.log('BROKEN INTERNAL GEAR LINKS:',JSON.stringify(bad));
+ expect(bad).toEqual([]);
+});
