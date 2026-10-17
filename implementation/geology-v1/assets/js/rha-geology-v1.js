@@ -95,9 +95,12 @@
           addText(card,'Unit',u.name||u.unit_name||u.strat_name);
           addText(card,'Age',u.t_int_name||u.age);
           addText(card,'Oldest interval',u.b_int_name);
+          addText(card,'Youngest age (Ma)',u.best_t_age??u.best_age_top);
+          addText(card,'Oldest age (Ma)',u.best_b_age??u.best_age_bottom);
           addText(card,'Rock type',u.lith||u.liths);
           addText(card,'Description',u.descrip);
           addText(card,'Source',u.source);
+          addText(card,'Source ID',u.source_id);
           addText(card,'Map ID',u.map_id);
           result.appendChild(card);
         });
