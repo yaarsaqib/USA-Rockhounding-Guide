@@ -1,0 +1,20 @@
+/* Integrated geology controls reuse the existing location guide's map structure. */
+.rha-mt-location-map-section .rha-geology-guide-controls{display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+.rha-mt-location-map-section .rha-geology-guide-controls button{font:inherit;padding:6px 10px;cursor:pointer}
+.rha-mt-location-map-section .rha-geology-guide-controls button[aria-pressed="true"]{background:#176777;color:#fff;border-color:#176777}
+.rha-mt-location-map-section .rha-geology-guide-panel{box-sizing:border-box;width:100%;margin:0;padding:15px 18px;background:#f6fbfa;border:1px solid #bad6d2;border-radius:0 0 12px 12px;color:#1a3736;font:14px/1.5 system-ui,sans-serif}
+.rha-mt-location-map-section .rha-geology-guide-panel[hidden],.rha-mt-location-map-section .rha-geo-guide-results[hidden]{display:none!important}
+.rha-mt-location-map-section .rha-geo-guide-head{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.rha-mt-location-map-section .rha-geo-guide-head strong{font-size:16px;color:#163f3d}
+.rha-mt-location-map-section .rha-geo-guide-head button{border:0;background:transparent;color:#174b49;font-size:23px;cursor:pointer}
+.rha-mt-location-map-section .rha-geology-guide-panel p{margin:7px 0;color:#2f4d4b}
+.rha-mt-location-map-section .rha-geo-guide-actions{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin:10px 0}
+.rha-mt-location-map-section .rha-geo-guide-actions button{border-radius:7px;background:#176777;border:1px solid #176777;color:white;padding:7px 12px;font-weight:700;cursor:pointer}
+.rha-mt-location-map-section .rha-geo-guide-actions label{display:flex;gap:9px;align-items:center;font-size:13px;font-weight:600}
+.rha-mt-location-map-section .rha-geo-guide-actions input{width:110px;accent-color:#176777}
+.rha-mt-location-map-section .rha-geo-guide-status{background:#e7f2ef;border-radius:7px;padding:9px;color:#164c46;font-size:13px}
+.rha-mt-location-map-section .rha-geo-guide-unit{margin:8px 0;padding:10px 12px;border:1px solid #c9dcda;background:#fff;border-radius:8px;overflow-wrap:anywhere}
+.rha-mt-location-map-section .rha-geo-guide-field{margin:3px 0;font-size:13px}
+.rha-mt-location-map-section .rha-geo-guide-credit{font-size:11px}
+.rha-mt-location-map-section .rha-geo-guide-inspect{cursor:crosshair!important}
+@media(max-width:640px){.rha-mt-location-map-section .rha-geology-guide-panel{padding:12px}.rha-mt-location-map-section .rha-geology-guide-controls{width:100%}}
