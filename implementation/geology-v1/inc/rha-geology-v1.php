@@ -12,7 +12,7 @@ add_action('wp_footer', function () {
     if (!is_page('rockhounding-map')) return;
     $scripts = wp_scripts();
     if (empty($scripts->registered['rh-map-locations'])) return;
-    wp_register_script('rha-geology-v1', get_stylesheet_directory_uri() . '/assets/js/rha-geology-v1.js', array('rh-leaflet'), '1.0.0', true);
+    wp_register_script('rha-geology-v1', get_stylesheet_directory_uri() . '/assets/js/rha-geology-v1.js', array('rh-leaflet'), '1.1.0', true);
     $deps = &$scripts->registered['rh-map-locations']->deps;
     if (!in_array('rha-geology-v1', $deps, true)) $deps[] = 'rha-geology-v1';
     wp_add_inline_script('rha-geology-v1', 'window.RHA_GEOLOGY_POINT_ENDPOINT=' . wp_json_encode(rest_url('rha-geology/v1/point')) . ';', 'before');
