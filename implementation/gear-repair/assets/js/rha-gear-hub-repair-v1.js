@@ -15,7 +15,7 @@ function init(){
  const bar=document.createElement('div');bar.className='rha-gear-catalog-bar';
  const intro=document.createElement('div');
  const title=document.createElement('strong');title.textContent='Browse the gear catalog';
- const subtitle=document.createElement('span');subtitle.textContent=cards.length+' photographed product records · choose the job first';
+ const subtitle=document.createElement('span');subtitle.textContent=cards.length+' catalog entries · start with the task' ;
  intro.append(title,subtitle);
  const top=document.createElement('a');top.href='#usarh-shop-products';top.textContent='Browse products ↓';top.className='rha-gear-toplink';
  bar.append(intro,top);
