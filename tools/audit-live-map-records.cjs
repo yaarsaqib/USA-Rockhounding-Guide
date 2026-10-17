@@ -2,16 +2,24 @@
 'use strict';
 const https=require('node:https'),vm=require('node:vm'),fs=require('node:fs');
 const url='https://usarockhounding.com/wp-content/plugins/rockhounding-map-explorer/rockhounding-map-v1/data/map_bundle.js';
-function download(url){
+function downloadOnce(url){
  return new Promise((resolve,reject)=>{
   https.get(url,{headers:{'User-Agent':'USA-Rockhounding-Audit/1.0 (public transparency)','Accept':'application/javascript'},timeout:55000},res=>{
-   if([301,302,307,308].includes(res.statusCode)){res.resume();return resolve(download(new URL(res.headers.location,url).href));}
+   if([301,302,307,308].includes(res.statusCode)){res.resume();return resolve(downloadOnce(new URL(res.headers.location,url).href));}
    if(res.statusCode!==200){res.resume();return reject(Error('HTTP '+res.statusCode))}
    const chunks=[];let size=0;
    res.on('data',c=>{size+=c.length;if(size>50000000){res.destroy(Error('Too large'));return;}chunks.push(c)});
    res.on('end',()=>resolve(Buffer.concat(chunks).toString('utf8')));
   }).on('error',reject);
  });
+}
+async function download(url){
+ let err;
+ for(let attempt=0;attempt<4;attempt++){
+  try{return await downloadOnce(url)}
+  catch(e){err=e;console.error('ATLAS_REMOTE_RETRY '+url+' attempt '+(attempt+1)+' '+String(e.message).slice(0,150));await new Promise(r=>setTimeout(r,4000*(attempt+1)));}
+ }
+ throw err;
 }
 function group(items,key,limit=100){
  return Object.entries(items.reduce((o,r)=>{const v=String((typeof key==='function'?key(r):r[key])??'∅').trim()||'∅';o[v]=(o[v]||0)+1;return o},{})).sort((a,b)=>b[1]-a[1]).slice(0,limit);
