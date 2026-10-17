@@ -4,6 +4,9 @@ on:
   push:
     branches: [audit/location-status-and-100k-source-20261017]
     paths: [tools/audit-live-map-records.cjs,.github/workflows/audit-live-map-records.yml]
+concurrency:
+  group: atlas-location-audit-20261017
+  cancel-in-progress: true
 permissions:
   contents: write
 jobs:
@@ -20,7 +23,8 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git fetch origin audit/location-status-and-100k-source-20261017
+          git reset --mixed origin/audit/location-status-and-100k-source-20261017
           git add audit/location-status/current-atlas-audit.json audit/location-status/all-core-locations-current-status.csv audit/location-status/state-by-state-status-review.csv
           git diff --cached --quiet || git commit -m 'Archive current national map status and eligibility audit'
-          git pull --rebase origin audit/location-status-and-100k-source-20261017
           git push origin HEAD:audit/location-status-and-100k-source-20261017
