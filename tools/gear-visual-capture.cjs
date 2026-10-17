@@ -1,4 +1,5 @@
 const {chromium}=require('playwright');
+const fs=require('fs');
 (async()=>{
  const browser=await chromium.launch({headless:true});
  for(const device of [
@@ -62,7 +63,8 @@ const {chromium}=require('playwright');
   for(const [section,y] of shots){
     await page.evaluate(y=>window.scrollTo({top:y,behavior:'instant'}),y);
     await page.waitForTimeout(250);
-    const binary=await page.screenshot({type:'jpeg',quality:52,animations:'disabled'});
+    const binary=await page.screenshot({type:'jpeg',quality:66,animations:'disabled'});
+    const folder='qa/screenshots/gear';fs.mkdirSync(folder,{recursive:true});fs.writeFileSync(folder+'/'+device.name+'_'+section+'.jpg',binary);
     const b64=binary.toString('base64');
     const chunk=3800;let idx=0;
     console.log('RHA_IMAGE_BEGIN '+device.name+'_'+section+' '+Math.ceil(b64.length/chunk)+' '+b64.length);
